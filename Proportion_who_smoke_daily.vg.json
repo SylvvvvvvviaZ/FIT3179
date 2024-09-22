@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A choropleth map showing the proportion of daily smokers in OECD countries.",
+  "data": {
+    "url": "/Users/a726928/Desktop/Table 2- Proportion who smoke daily, people aged 15 and over, by sex, OECD countries, 2022 or nearest year.csv",
+    "format": {
+      "type": "json"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "Country",
+      "from": {
+        "data": {
+          "url": "https://github.com/SylvvvvvvviaZ/FIT3179/blob/main/Proportion%20who%20smoke%20daily_people%20aged%2015%20and%20over_by%20sex.vg.json",
+          "format": {
+            "type": "topojson",
+            "feature": "countries"
+          }
+        },
+        "key": "properties.name"
+      },
+      "as": "geo"
+    }
+  ],
+  "projection": {
+    "type": "mercator"
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "Persons (%)",
+      "type": "quantitative",
+      "title": "Percentage of Daily Smokers"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "Persons (%)", "type": "quantitative", "title": "Daily Smokers (%)"}
+    ]
+  }
+}
