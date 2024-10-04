@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 600,
+  "title": {
+    "text": "Proportion who smoke daily, people aged 15 and over, by sex, OECD countries, 2022 or nearest year",
+    "fontSize": 20,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#333"
+  },
+  "projection": {
+    "type": "equalEarth"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/Week9_Homework/js/ne_110m_admin_0_countries.json",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_110m_admin_0_countries"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/Week9_Homework/data/Proportion_who_smoke_daily.csv"
+        },
+        "key": "Country",
+        "fields": [
+          "Persons (%)",
+          "Males (%)",
+          "Females (%)",
+          "Latest year of data"
+        ]
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape"
+  },
+  "encoding": {
+    "color": {
+      "field": "Persons (%)",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          35
+        ],
+        "range": [
+          "#f7fbff",
+          "#08306b"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.NAME",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "Persons (%)",
+        "type": "quantitative"
+      },
+      {
+        "field": "Males (%)",
+        "type": "quantitative",
+        "title": "Males (%)"
+      },
+      {
+        "field": "Females (%)",
+        "type": "quantitative",
+        "title": "Females (%)"
+      },
+      {
+        "field": "Latest year of data",
+        "type": "nominal",
+        "title": "Latest Year of Data"
+      }
+    ]
+  }
+}
