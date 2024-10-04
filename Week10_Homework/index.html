@@ -20,55 +20,33 @@
 <body>
 
     <div class="page">
+        <h1>Alcohol, Tobacco, and Other Drugs Impacts in Australia</h1>
 
-        <!-- pure grid group -->
-        <div class="pure-g">
-            <div class="pure-u-1-1">
-                <h1>Alcohol, Tobacco, and Other Drugs Impacts in Australia</h1>
-                <p>This dashboard presents two key visualizations related to drug and tobacco use in Australia.</p>
+        <!-- Visualization 1: Left (Vis), Right (Text) -->
+        <div class="pure-g vis-group">
+            <div class="pure-u-1-2 vis-container" id="vis1"></div>
+            <div class="pure-u-1-2 description">
+                <p>This visualization highlights the smoking rates across OECD countries, focusing on individuals aged 15 and over who smoke daily. 
+                The data reveals significant regional disparities, with some countries showing over 30% daily smokers, 
+                indicating cultural and policy impacts on smoking prevalence. This comparison aids in understanding global health implications and policy effectiveness.
+                </p>
             </div>
         </div>
-        <!-- end pure grid group -->
 
-        <!-- pure grid group -->
-        <div class="pure-g">
-            <div class="pure-u-1-2">
-                <div class="description description-left">
-                    <h2>Drug-Related Ambulance Attendances</h2>
-                    <p>This visualization shows the number of drug-related ambulance attendances by type and
-                        jurisdiction from 2015 to 2023. It highlights the various drugs involved and the frequency of
-                        ambulance attendances.</p>
-                </div>
+        <!-- Visualization 2: Left (Text), Right (Vis) -->
+        <div class="pure-g vis-group">
+            <div class="pure-u-1-2 description">
+                <p>This visualization examines drug-related ambulance attendances across Australian states, 
+                categorized by drug type from 2015 to 2023. Alcohol intoxication is the most frequent cause, 
+                with opioids and amphetamines also contributing significantly. The data allows for trend analysis by region and drug type, 
+                shedding light on public health impacts and aiding in resource allocation for emergency services.
+                </p>
             </div>
-            <div class="pure-u-1-2">
-                <div id="vis2" class="vis-container"></div>
-            </div>
+            <div class="pure-u-1-2 vis-container" id="vis2"></div>
         </div>
-        <!-- end pure grid group -->
 
-        <!-- pure grid group -->
-        <div class="pure-g">
-            <div class="pure-u-1-3">
-                <div class="description description-left">
-                    <h2>Proportion of Population Who Smoke Daily</h2>
-                    <p>This visualization displays the proportion of daily smokers as a percentage of the population
-                        aged 15 and over, helping us understand smoking trends across different years and regions in
-                        Australia.</p>
-                </div>
-            </div>
-            <div class="pure-u-1-3">
-                <div id="vis1" class="vis-container"></div>
-            </div>
-        </div>
-        <!-- end pure grid group -->
-
-        <div class="pure-g">
-            <div class="pure-u-1-1 small-font">
-                <p>This dashboard is created using Vega-Lite visualizations. Data sources include the Australian
-                    Institute of Health and Welfare reports on drug-related ambulance attendances and smoking
-                    habits.</p>
-            </div>
-        </div>
+        <p class="small-font">This dashboard is created using Vega-Lite visualizations. The data is sourced from the
+        Australian Institute of Health and Welfare reports.</p>
 
     </div> <!-- end page -->
 
@@ -77,13 +55,13 @@
         var specVis2 = "./drug_related_ambulance.vg.json";
     
         vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            // Access the Vega view instance as result.view
           }).catch(console.error);
       
           vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            // Access the Vega view instance as result.view
           }).catch(console.error);
-    </script>    
+    </script>
 </body>
 
 </html>
