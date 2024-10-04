@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
   <!-- CSS file -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 </head>
 
@@ -73,14 +73,12 @@
   </div> <!-- end page -->
 
   <script type="text/javascript">
-    var specVis1 = "https://SylvvvvvvviaZ.github.io/FIT3179/Week10_Homework/json/Proportion_who_smoke_daily.vg.json/";
-    var specVis2 = "https://SylvvvvvvviaZ.github.io/FIT3179/Week10_Homework/jsondrug_related_ambulance.json";
+    var specVis1 = "https://SylvvvvvvviaZ.github.io/FIT3179/Week10_Homework/json/drug_related_ambulance.json";
+    var specVis2 = "https://SylvvvvvvviaZ.github.io/FIT3179/Week10_Homework/json/Proportion_who_smoke_daily.vg.json";
 
-    vegaEmbed('#vis1', specVis1, { "actions": false });
+    vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
 
-    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-      // Access the Vega view instance as result.view
-    }).catch(console.error);
+    vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
   </script>
 </body>
 
