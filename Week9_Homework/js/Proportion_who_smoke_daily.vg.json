@@ -1,8 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Proportion who smoke daily, people aged 15 and over, by sex, OECD countries, 2022 or nearest year",
-  "width": 700,
-  "height": 500,
+  "width": 600,
+  "height": 600,
+  "title": {
+    "text": "Proportion who smoke daily, people aged 15 and over, by sex, OECD countries, 2022 or nearest year",
+    "fontSize": 20,
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#333"
+  },
   "projection": {
     "type": "equalEarth"
   },

@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 600,
+    "title": {
+      "text": "Ambulance Attendances by Incident Type and Jurisdiction: Comprehensive Overview",
+      "fontSize": 20,
+      "fontWeight": "bold",
+      "anchor": "start",
+      "color": "#333"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/Week10_Homework/data/drug_related_ambulance.csv"
+    },
+    "params": [
+      {
+        "name": "Year_selection",
+        "bind": {
+          "input": "select",
+          "options": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+          "labels": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"],
+          "name": "Year Selection: "
+        },
+        "value": 2015
+      }
+    ],
+    "transform": [
+      {"filter": "datum.Year == Year_selection"}
+    ],
+    "mark": {
+      "type": "bar",
+      "cornerRadiusEnd": 4,
+      "tooltip": true
+    },
+    "encoding": {
+      "x": {
+        "field": "State",
+        "type": "nominal",
+        "title": "State",
+        "axis": {"labelFontSize": 14, "titleFontSize": 16}
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": "Number",
+        "type": "quantitative",
+        "title": "Total Number of Incidents",
+        "axis": {"labelFontSize": 14, "titleFontSize": 16}
+      },
+      "color": {
+        "field": "Type",
+        "type": "nominal",
+        "title": "Incident Type",
+        "scale": {
+          "range": ["#D4A797", "#A2AA9F", "#3A7C75", "#79926E", "#FB9B47", "#EFCF88"]
+        }
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal"},
+        {"field": "Type", "type": "nominal", "title": "Incident Type"},
+        {"field": "Number", "type": "quantitative", "aggregate": "sum", "title": "Total Incidents"},
+        {"field": "Year", "type": "ordinal"}
+      ]
+    }
+  }
+  
