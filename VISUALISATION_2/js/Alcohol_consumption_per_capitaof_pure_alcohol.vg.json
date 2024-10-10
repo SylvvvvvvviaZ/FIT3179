@@ -3,7 +3,7 @@
     "width": 600,
     "height": 350,
     "title": {
-        "text": "Average Number of Cigarettes Smoked Per Day Among People Aged 15 and Over",
+        "text": "Alcohol Consumption (Liters per Capita of Pure Alcohol) Among People Aged 15 and Over",
         "fontSize": 15,
         "fontWeight": "bold",
         "anchor": "middle",
@@ -38,7 +38,7 @@
             },
             "mark": {
                 "type": "geoshape",
-                "fill": "#E9F1EA",
+                "fill": "#DFC6C6",
                 "stroke": "white"
             }
         },
@@ -55,17 +55,17 @@
                     "lookup": "properties.NAME",
                     "from": {
                         "data": {
-                            "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Number_of_cigarettes_smoked_per_day.csv"
+                            "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Alcohol_consumption_per_capitaof_pure_alcohol.csv"
                         },
                         "key": "Country",
                         "fields": [
-                            "Number of cigarettes",
+                            "Litres per capita of pure alcohol",
                             "Latest year of data"
                         ]
                     }
                 },
                 {
-                    "filter": "datum['Number of cigarettes'] != null"
+                    "filter": "datum['Litres per capita of pure alcohol'] != null"
                 }
             ],
             "mark": {
@@ -74,7 +74,7 @@
             },
             "encoding": {
                 "color": {
-                    "field": "Number of cigarettes",
+                    "field": "Litres per capita of pure alcohol",
                     "type": "quantitative",
                     "scale": {
                         "domain": [
@@ -82,12 +82,12 @@
                             20
                         ],
                         "range": [
-                            "#ACD6A5",
-                            "#457A62"
+                            "#E19D92",
+                            "#AA4D4D"
                         ]
                     },
                     "legend": {
-                        "title": "Number of cigarettes"
+                        "title": "Litres of Pure Alcohol"
                     }
                 },
                 "tooltip": [
@@ -97,9 +97,9 @@
                         "title": "Country"
                     },
                     {
-                        "field": "Number of cigarettes",
-                        "type": "nominal",
-                        "title": "Avg Cigarettes Per Day"
+                        "field": "Litres per capita of pure alcohol",
+                        "type": "quantitative",
+                        "title": "Litres per Capita"
                     },
                     {
                         "field": "Latest year of data",

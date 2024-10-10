@@ -3,7 +3,7 @@
   "width": 600,
   "height": 350,
   "title": {
-    "text": "Proportion of Daily Smokers Among People Aged 15 and Over, in OECD Countries",
+    "text": "Proportion of Daily Smokers By Sex Among People Aged 15 and Over",
     "fontSize": 15,
     "fontWeight": "bold",
     "anchor": "middle",
@@ -38,7 +38,7 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
+        "fill": "#D1E0E3",
         "stroke": "white"
       }
     },
@@ -84,8 +84,8 @@
               35
             ],
             "range": [
-              "#f7fbff",
-              "#08306b"
+              "#95D3DF",
+              "#4E79A7"
             ]
           },
           "legend": {
