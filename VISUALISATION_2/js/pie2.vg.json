@@ -11,7 +11,7 @@
     },
     "description": "A donut chart showing psychosocial risk factors for drug-induced deaths with a year slider.",
     "data": {
-        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Psychosocial_risk_factors_for_drug-induced_deaths.csv"
+        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Associated_causes_for_drug-induced_deaths.csv"
     },
     "transform": [
         {
@@ -28,7 +28,7 @@
             "type": "quantitative"
         },
         "color": {
-            "field": "Psychosocial risk factors",
+            "field": "Associated causes",
             "type": "nominal",
             "legend": {
                 "titleFontSize": 12,

@@ -22,45 +22,69 @@
     <div class="page">
         <h1>Alcohol, Tobacco, and Other Drugs Impacts in Australia</h1>
 
-        <!-- Visualization 1: Left (Vis), Right (Text) -->
+        <!-- Text on top of Visualization 1, 2, 3 (3 visualizations in one row) -->
+        <div class="description">
+            <p>1111</p>
+        </div>
         <div class="pure-g vis-group">
-            <div class="pure-u-1-2 vis-container" id="vis1"></div>
-            <div class="pure-u-1-2 description">
-                <p>This visualization highlights the smoking rates across OECD countries, focusing on individuals aged 15 and over who smoke daily. 
-                The data reveals significant regional disparities, with some countries showing over 30% daily smokers, 
-                indicating cultural and policy impacts on smoking prevalence. This comparison aids in understanding global health implications and policy effectiveness.
-                </p>
-            </div>
+            <div class="pure-u-1-3 vis-container" id="vis1"></div>
+            <div class="pure-u-1-3 vis-container" id="vis2"></div>
+            <div class="pure-u-1-3 vis-container" id="vis3"></div>
         </div>
 
-        <!-- Visualization 2: Left (Text), Right (Vis) -->
+        <!-- Text on top of Visualization 4 (1 visualization in one row) -->
+        <div class="description">
+            <p>2222</p>
+        </div>
         <div class="pure-g vis-group">
-            <div class="pure-u-1-2 description">
-                <p>This visualization examines drug-related ambulance attendances across Australian states, 
-                categorized by drug type from 2015 to 2023. Alcohol intoxication is the most frequent cause, 
-                with opioids and amphetamines also contributing significantly. The data allows for trend analysis by region and drug type, 
-                shedding light on public health impacts and aiding in resource allocation for emergency services.
-                </p>
-            </div>
-            <div class="pure-u-1-2 vis-container" id="vis2"></div>
+            <div class="pure-u-1 vis-container" id="vis4"></div>
+        </div>
+
+        <!-- Text on top of Visualization 5, 6 (2 visualizations in one row) -->
+        <div class="description">
+            <p>3333</p>
+        </div>
+        <div class="pure-g vis-group">
+            <div class="pure-u-1-2 vis-container" id="vis5"></div>
+            <div class="pure-u-1-2 vis-container" id="vis6"></div>
         </div>
 
         <p class="small-font">This dashboard is created using Vega-Lite visualizations. The data is sourced from the
-        Australian Institute of Health and Welfare reports.</p>
+            Australian Institute of Health and Welfare reports.</p>
 
     </div> <!-- end page -->
 
     <script type="text/javascript">
         var specVis1 = "./Proportion_who_smoke_daily.vg.json";
-        var specVis2 = "./drug_related_ambulance.vg.json";
-    
+        var specVis2 = "./Alcohol_consumption_per_capitaof_pure_alcohol.vg.json";
+        var specVis3 = "./Number_of_cigarettes_smoked_per_day.vg.json";
+        var specVis4 = "./Drug_related_ambulance.vg.json";
+        var specVis5 = "./pie1.vg.json";
+        var specVis6 = "./pie2.vg.json";
+
         vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
             // Access the Vega view instance as result.view
-          }).catch(console.error);
-      
-          vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+        }).catch(console.error);
+
+        vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
             // Access the Vega view instance as result.view
-          }).catch(console.error);
+        }).catch(console.error);
+
+        vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
     </script>
 </body>
 
