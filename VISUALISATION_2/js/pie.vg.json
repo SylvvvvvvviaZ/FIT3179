@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A donut chart showing psychosocial risk factors for drug-induced deaths with a year slider.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Psychosocial_risk_factors_for_drug-induced_deaths.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum['Year'] == yearSelection"
+      }
+    ],
+    "mark": {"type": "arc", "innerRadius": 50},
+    "encoding": {
+      "theta": {"field": "Percentage (%)", "type": "nominal"},
+      "color": {"field": "Psychosocial risk factors", "type": "nominal"}
+    },
+    "view": {"stroke": null},
+    "selection": {
+      "yearSelection": {
+        "type": "single",
+        "fields": ["Year"],
+        "bind": {
+          "input": "range",
+          "min": 2019,
+          "max": 2022,
+          "step": 1
+        },
+        "init": {"Year": 2021}
+      }
+    }
+  }
+  

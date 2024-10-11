@@ -1,65 +1,70 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
-    "height": 600,
+    "height": 350,
     "title": {
-      "text": "Ambulance Attendances by Incident Type and Jurisdiction: Comprehensive Overview",
-      "fontSize": 20,
+      "text": "Number and Crude Rate (per 100,000 Population) of Drug-Related Ambulance Attendances by Drug Type and Jurisdiction in 2015–2023",
+      "fontSize": 14,
       "fontWeight": "bold",
-      "anchor": "start",
-      "color": "#333"
+      "anchor": "middle",
+      "color": "#000000"
     },
     "data": {
       "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/drug_related_ambulance.csv"
     },
     "params": [
       {
-        "name": "Year_selection",
+        "name": "State_selection",
         "bind": {
           "input": "select",
-          "options": [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-          "labels": ["2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"],
-          "name": "Year Selection: "
-        },
-        "value": 2015
+          "options": [null, "ACT", "NSW", "NT", "QLD", "VIC"],
+          "labels": ["Show All", "ACT", "NSW", "NT", "QLD", "VIC"],
+          "name": "State Selection: "
+        }
       }
     ],
     "transform": [
-      {"filter": "datum.Year == Year_selection"}
+      {"filter": "State_selection == null || datum.State == State_selection"}
     ],
-    "mark": {
-      "type": "bar",
-      "cornerRadiusEnd": 4,
-      "tooltip": true
-    },
     "encoding": {
       "x": {
-        "field": "State",
-        "type": "nominal",
-        "title": "State",
-        "axis": {"labelFontSize": 14, "titleFontSize": 16}
-      },
-      "y": {
-        "aggregate": "sum",
         "field": "Number",
         "type": "quantitative",
-        "title": "Total Number of Incidents",
-        "axis": {"labelFontSize": 14, "titleFontSize": 16}
+        "title": "Number of Incidents",
+        "axis": {"grid": true, "labelFontSize": 14, "titleFontSize": 12}
+      },
+      "y": {
+        "field": "Rate",
+        "type": "quantitative",
+        "title": "Rate of Incidents",
+        "axis": {"grid": true, "labelFontSize": 14, "titleFontSize": 12}
       },
       "color": {
         "field": "Type",
         "type": "nominal",
         "title": "Incident Type",
-        "scale": {
-          "range": ["#D4A797", "#A2AA9F", "#3A7C75", "#79926E", "#FB9B47", "#EFCF88"]
-        }
+        "scale": {"range": ["#e19d92", "#eac47c", "#dbc0af", "#c4c9c2", "#a5c2cd", "#dadae4"]}
       },
+      "size": {
+        "field": "Rate",
+        "type": "quantitative",
+        "scale": {"range": [50, 400]},
+        "legend": {"title": "Rate (Size)", "titleFontSize": 11, "labelFontSize": 10}
+      },
+      "opacity": {"value": 0.7},
       "tooltip": [
-        {"field": "State", "type": "nominal"},
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Month", "type": "ordinal", "title": "Month"},
         {"field": "Type", "type": "nominal", "title": "Incident Type"},
-        {"field": "Number", "type": "quantitative", "aggregate": "sum", "title": "Total Incidents"},
-        {"field": "Year", "type": "ordinal"}
+        {"field": "State", "type": "nominal", "title": "State"},
+        {"field": "Number", "type": "quantitative", "title": "Number of Incidents"},
+        {"field": "Rate", "type": "quantitative", "title": "Rate of Incidents"}
       ]
+    },
+    "mark": {
+      "type": "circle",
+      "stroke": "white",
+      "strokeWidth": 0.5
     }
   }
   
