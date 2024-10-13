@@ -1,70 +1,231 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
-    "height": 550,
-    "title": {
-      "text": "Number and Crude Rate (per 100,000 Population) of Drug-Related Ambulance Attendances by Drug Type and Jurisdiction in 2015–2023",
-      "fontSize": 14,
-      "fontWeight": "bold",
-      "anchor": "middle",
-      "color": "#000000"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "title": {
+    "text": "Number and Crude Rate of Drug-Related Ambulance Attendances by Drug Type and Jurisdiction in 2015–2023",
+    "fontSize": 14,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#000000"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/drug_related_ambulance.csv"
+  },
+  "params": [
+    {
+      "name": "State_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "ACT",
+          "NSW",
+          "NT",
+          "QLD",
+          "VIC"
+        ],
+        "labels": [
+          "Show All",
+          "ACT",
+          "NSW",
+          "NT",
+          "QLD",
+          "VIC"
+        ],
+        "name": "State Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "State_selection == null || datum.State == State_selection"
+    }
+  ],
+  "layer": [
+    {
+      "encoding": {
+        "x": {
+          "field": "Number",
+          "type": "quantitative",
+          "title": "Number of Incidents",
+          "axis": {
+            "grid": true,
+            "labelFontSize": 14,
+            "titleFontSize": 12
+          },
+          "scale": {
+            "nice": true
+          }
+        },
+        "y": {
+          "field": "Rate",
+          "type": "quantitative",
+          "title": "Crude Rate of Incidents (per 100,000 Population)",
+          "axis": {
+            "grid": true,
+            "labelFontSize": 14,
+            "titleFontSize": 12
+          },
+          "scale": {
+            "nice": true
+          }
+        },
+        "color": {
+          "field": "Type",
+          "type": "nominal",
+          "title": "Incident Type",
+          "scale": {
+            "range": [
+              "#7D957F",
+              "#80A688",
+              "#C7D2DF",
+              "#9CB4CE",
+              "#DFC6C6",
+              "#CF9A9A"
+            ]
+          }
+        },
+        "size": {
+          "field": "Rate",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              70,
+              300
+            ]
+          },
+          "legend": {
+            "title": "Rate (Size)",
+            "titleFontSize": 11,
+            "labelFontSize": 10
+          }
+        },
+        "opacity": {
+          "value": 1
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "Month",
+            "type": "ordinal",
+            "title": "Month"
+          },
+          {
+            "field": "Type",
+            "type": "nominal",
+            "title": "Incident Type"
+          },
+          {
+            "field": "State",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "Number",
+            "type": "quantitative",
+            "title": "Number of Incidents"
+          },
+          {
+            "field": "Rate",
+            "type": "quantitative",
+            "title": "Crude Rate of Incidents"
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "white",
+        "strokeWidth": 0.7
+      }
     },
-    "data": {
-      "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/drug_related_ambulance.csv"
-    },
-    "params": [
-      {
-        "name": "State_selection",
-        "bind": {
-          "input": "select",
-          "options": [null, "ACT", "NSW", "NT", "QLD", "VIC"],
-          "labels": ["Show All", "ACT", "NSW", "NT", "QLD", "VIC"],
-          "name": "State Selection: "
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 14,
+        "dx": -10,
+        "dy": -30
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "Notes:"
         }
       }
-    ],
-    "transform": [
-      {"filter": "State_selection == null || datum.State == State_selection"}
-    ],
-    "encoding": {
-      "x": {
-        "field": "Number",
-        "type": "quantitative",
-        "title": "Number of Incidents",
-        "axis": {"grid": true, "labelFontSize": 14, "titleFontSize": 12}
-      },
-      "y": {
-        "field": "Rate",
-        "type": "quantitative",
-        "title": "Rate of Incidents",
-        "axis": {"grid": true, "labelFontSize": 14, "titleFontSize": 12}
-      },
-      "color": {
-        "field": "Type",
-        "type": "nominal",
-        "title": "Incident Type",
-        "scale": {"range": ["#e19d92", "#eac47c", "#dbc0af", "#c4c9c2", "#a5c2cd", "#dadae4"]}
-      },
-      "size": {
-        "field": "Rate",
-        "type": "quantitative",
-        "scale": {"range": [50, 400]},
-        "legend": {"title": "Rate (Size)", "titleFontSize": 11, "labelFontSize": 10}
-      },
-      "opacity": {"value": 0.7},
-      "tooltip": [
-        {"field": "Year", "type": "ordinal", "title": "Year"},
-        {"field": "Month", "type": "ordinal", "title": "Month"},
-        {"field": "Type", "type": "nominal", "title": "Incident Type"},
-        {"field": "State", "type": "nominal", "title": "State"},
-        {"field": "Number", "type": "quantitative", "title": "Number of Incidents"},
-        {"field": "Rate", "type": "quantitative", "title": "Rate of Incidents"}
-      ]
     },
-    "mark": {
-      "type": "circle",
-      "stroke": "white",
-      "strokeWidth": 0.5
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 11,
+        "dx": -10,
+        "dy": -10
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "1. Ambulance attendance numbers exclude 0–14, and not reported age groups."
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 11,
+        "dx": -10,
+        "dy": 10
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "2. Fewer patient care records were captured in June 2016 and 2021 in NSW; interpret cautiously."
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 11,
+        "dx": -10,
+        "dy": 30
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "3. Reduced ambulance attendances in NSW Jan-Feb 2023 due to system issues and paramedic strikes; interpret cautiously."
+        }
+      }
     }
-  }
-  
+  ]
+}

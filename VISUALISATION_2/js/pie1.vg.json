@@ -1,76 +1,72 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 550,
-    "height": 300,
+    "width": 800,
+    "height": 400,
     "title": {
-        "text": "Most Common Psychosocial Risk Factors For Drug-induced Deaths In 2019–2022",
-        "fontSize": 14,
-        "fontWeight": "bold",
-        "anchor": "middle",
-        "color": "#000000"
+      "text": "Most Common Psychosocial Risk Factors For Drug-induced Deaths In 2019–2022",
+      "fontSize": 14,
+      "fontWeight": "bold",
+      "anchor": "middle",
+      "color": "#000000"
     },
     "description": "A donut chart showing psychosocial risk factors for drug-induced deaths with a year slider.",
     "data": {
-        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Psychosocial_risk_factors_for_drug-induced_deaths.csv"
+      "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Psychosocial_risk_factors_for_drug-induced_deaths.csv"
     },
     "transform": [
-        {
-            "filter": "datum['Year'] == yearSelection.Year"
-        }
+      {
+        "filter": "datum['Year'] == yearSelection_Year.Year"
+      }
     ],
     "mark": {
-        "type": "arc",
-        "innerRadius": 50
+      "type": "arc",
+      "innerRadius": 50,
+      "tooltip": true
     },
     "encoding": {
-        "theta": {
-            "field": "Percentage (%)",
-            "type": "quantitative"
+      "theta": {
+        "field": "Percentage (%)",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "Psychosocial risk factors",
+        "type": "nominal",
+        "legend": {
+          "titleFontSize": 14,
+          "labelFontSize": 12,
+          "labelLimit": 800
         },
-        "color": {
-            "field": "Psychosocial risk factors",
-            "type": "nominal",
-            "legend": {
-                "titleFontSize": 12,
-                "labelFontSize": 8
-            },
-            "scale": {
-                "range": [
-                    "#F1EFE3",
-                    "#A2AA9F",
-                    "#D4A797",
-                    "#A5B5A9",
-                    "#3A7C75",
-                    "#79926E",
-                    "#FB9B47",
-                    "#EFCF88",
-                    "#a5c2cd",
-                    "#dadae4",
-                    "#c4c9c2",
-                    "#7e8cad",
-                    "#e19d92"
-                ]
-            }
+        "scale": {
+          "range": ["#7D957F", "#80A688", "#C1D4C5", 
+          "#C7D2DF", "#9CB4CE", "#4E79A7", "#dadae4",
+          "#DFC6C6", "#CF9A9A", "#AA4D4D"
+          ]
         }
+      },
+      "tooltip": [
+        {"field": "Psychosocial risk factors", "type": "nominal", "title": "Psychosocial Risk Factor"},
+        {"field": "Number", "type": "quantitative", "title": "Number"},
+        {"field": "Percentage (%)", "type": "quantitative", "title": "Percentage (%)"}
+      ]
     },
     "view": {
-        "stroke": null
+      "stroke": null
     },
     "selection": {
-        "yearSelection": {
-            "type": "single",
-            "fields": [
-                "Year"
-            ],
-            "bind": {
-                "input": "range",
-                "min": 2019,
-                "max": 2022,
-                "step": 1
-            },
-            "init": {
-                "Year": 2021
-            }
+      "yearSelection_Year": {
+        "type": "single",
+        "fields": ["Year"],
+        "bind": {
+          "input": "range",
+          "min": 2019,
+          "max": 2022,
+          "step": 1,
+          "name": "Year Selection: "
+        },
+        "init": {
+          "Year": 2022
         }
+      }
     }
-}
+  }
+  

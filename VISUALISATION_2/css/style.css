@@ -13,7 +13,7 @@ body {
 /* Page container styling */
 .page {
     width: 100%;
-    max-width: 2500px; /* Set a max-width for the content to make sure it fits nicely */
+    max-width: 2000px; /* Set a max-width for the content to make sure it fits nicely */
     padding: 10px; /* Padding around the content */
     background-color: white; /* White content box */
     margin: 10px auto;
@@ -80,7 +80,7 @@ h1 {
 @media only screen and (max-width: 2500px) {
     .page {
         width: 100vw;
-        max-width: 2500px; /* Ensure the content width doesn't exceed the screen width */
+        max-width: 2000px; /* Ensure the content width doesn't exceed the screen width */
     }
 }
 
