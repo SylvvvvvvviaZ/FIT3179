@@ -1,118 +1,40 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total Deaths by Drug Type Over Time",
   "data": {
-      "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Death_by_Drug_Type_per_Year.csv"
+    "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Death_by_drug_type_per_year.csv"
   },
-  "vconcat": [
-      {
-          "width": 800,
-          "height": 600,
-          "encoding": {
-              "x": {
-                  "field": "Year",
-                  "type": "temporal",
-                  "title": "Year"
-              },
-              "y": {
-                  "title": "Death Number",
-                  "field": "Death Number",
-                  "type": "quantitative"
-              },
-              "color": {
-                  "field": "Drug Type",
-                  "type": "nominal",
-                  "scale": {
-                      "scheme": "category20"
-                  }
-              },
-              "opacity": {
-                  "condition": {
-                      "param": "brush",
-                      "value": 1
-                  },
-                  "value": 0.3
-              }
-          },
-          "layer": [
-              {
-                  "params": [
-                      {
-                          "name": "brush",
-                          "select": {
-                              "type": "interval",
-                              "encodings": [
-                                  "x"
-                              ]
-                          }
-                      }
-                  ],
-                  "mark": {
-                      "type": "line",
-                      "point": true,
-                      "tooltip": true
-                  }
-              },
-              {
-                  "mark": "line"
-              }
-          ]
-      },
-      {
-          "encoding": {
-              "x": {
-                  "aggregate": "sum",
-                  "field": "Death Number",
-                  "title": "Total Deaths"
-              },
-              "y": {
-                  "title": "Drug Type",
-                  "field": "Drug Type",
-                  "type": "nominal"
-              },
-              "color": {
-                  "condition": {
-                      "param": "click",
-                      "field": "Drug Type",
-                      "scale": {
-                          "scheme": "category20"
-                      }
-                  },
-                  "value": "gray"
-              }
-          },
-          "width": 800,
-          "mark": {
-              "type": "bar",
-              "tooltip": true
-          },
-          "params": [
-              {
-                  "name": "click",
-                  "select": {
-                      "type": "interval",
-                      "encodings": [
-                          "color"
-                      ]
-                  }
-              }
-          ],
-          "transform": [
-              {
-                  "filter": {
-                      "param": "brush"
-                  }
-              }
-          ]
-      }
-  ],
+  "title": "Drug-Induced Deaths by Drug Type and Year",
+  "mark": "rect",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year"
+    },
+    "y": {
+      "field": "Drug Type",
+      "type": "nominal",
+      "title": "Drug Type"
+    },
+    "color": {
+      "field": "Death Number",
+      "type": "quantitative",
+      "title": "Deaths",
+      "aggregate": "sum"
+    },
+    "tooltip": [
+      {"field": "Year", "type": "quantitative", "title": "Year"},
+      {"field": "Drug Type", "type": "nominal", "title": "Drug Type"},
+      {"field": "Death Number", "type": "quantitative", "title": "Death Number"}
+    ]
+  },
   "config": {
-      "title": {
-          "font": "Roboto Condensed",
-          "fontSize": 14,
-          "anchor": "middle",
-          "align": "center"
-      },
-      "numberFormat": ","
+    "view": {
+      "strokeWidth": 0,
+      "step": 20
+    },
+    "axis": {
+      "domain": false
+    }
   }
 }

@@ -1,325 +1,325 @@
 Year,Month,Type,State,Number,Rate
-2015,March,Alcohol intoxication,ACT,105.0,26.53
-2015,March,Alcohol intoxication,NSW,1200.0,15.76
-2015,March,Alcohol intoxication,NT,,
-2015,March,Alcohol intoxication,QLD,2293.0,47.99
-2015,March,Alcohol intoxication,TAS,157.0,30.48
-2015,March,Alcohol intoxication,VIC,1563.0,25.95
-2015,March,All opioids,ACT,10.0,2.53
-2015,March,All opioids,NSW,81.0,1.06
-2015,March,All opioids,NT,,
-2015,March,All opioids,QLD,147.0,3.08
-2015,March,All opioids,TAS,12.0,2.33
-2015,March,All opioids,VIC,92.0,1.53
-2015,March,Amphetamines (any),ACT,,
-2015,March,Amphetamines (any),NSW,175.0,2.3
-2015,March,Amphetamines (any),NT,,
-2015,March,Amphetamines (any),QLD,203.0,4.25
-2015,March,Amphetamines (any),TAS,14.0,2.72
-2015,March,Amphetamines (any),VIC,253.0,4.2
-2015,March,Benzodiazepines,ACT,10.0,2.53
-2015,March,Benzodiazepines,NSW,228.0,2.99
+2015,March,Alcohol intoxication,ACT,105,26.53
+2015,March,Alcohol intoxication,NSW,1200,15.76
+2015,March,Alcohol intoxication,NT,,
+2015,March,Alcohol intoxication,QLD,2293,47.99
+2015,March,Alcohol intoxication,TAS,157,30.48
+2015,March,Alcohol intoxication,VIC,1563,25.95
+2015,March,All opioids,ACT,10,2.53
+2015,March,All opioids,NSW,81,1.06
+2015,March,All opioids,NT,,
+2015,March,All opioids,QLD,147,3.08
+2015,March,All opioids,TAS,12,2.33
+2015,March,All opioids,VIC,92,1.53
+2015,March,Amphetamines ,ACT,,
+2015,March,Amphetamines ,NSW,175,2.3
+2015,March,Amphetamines ,NT,,
+2015,March,Amphetamines ,QLD,203,4.25
+2015,March,Amphetamines ,TAS,14,2.72
+2015,March,Amphetamines ,VIC,253,4.2
+2015,March,Benzodiazepines,ACT,10,2.53
+2015,March,Benzodiazepines,NSW,228,2.99
 2015,March,Benzodiazepines,NT,,
-2015,March,Benzodiazepines,QLD,385.0,8.06
-2015,March,Benzodiazepines,TAS,30.0,5.82
-2015,March,Benzodiazepines,VIC,358.0,5.94
-2015,March,Cannabis,ACT,9.0,2.27
-2015,March,Cannabis,NSW,165.0,2.17
+2015,March,Benzodiazepines,QLD,385,8.06
+2015,March,Benzodiazepines,TAS,30,5.82
+2015,March,Benzodiazepines,VIC,358,5.94
+2015,March,Cannabis,ACT,9,2.27
+2015,March,Cannabis,NSW,165,2.17
 2015,March,Cannabis,NT,,
-2015,March,Cannabis,QLD,217.0,4.54
-2015,March,Cannabis,TAS,41.0,7.96
-2015,March,Cannabis,VIC,244.0,4.05
+2015,March,Cannabis,QLD,217,4.54
+2015,March,Cannabis,TAS,41,7.96
+2015,March,Cannabis,VIC,244,4.05
 2015,March,Heroin,ACT,,
-2015,March,Heroin,NSW,63.0,0.83
+2015,March,Heroin,NSW,63,0.83
 2015,March,Heroin,NT,,
-2015,March,Heroin,QLD,42.0,0.88
-2015,March,Heroin,TAS,0.0,
-2015,March,Heroin,VIC,204.0,3.39
-2016,March,Alcohol intoxication,ACT,142.0,35.23
-2016,March,Alcohol intoxication,NSW,1704.0,22.04
-2016,March,Alcohol intoxication,NT,291.0,118.45
-2016,March,Alcohol intoxication,QLD,2824.0,58.29
-2016,March,Alcohol intoxication,TAS,194.0,37.49
-2016,March,Alcohol intoxication,VIC,2000.0,32.4
-2016,March,All opioids,ACT,7.0,1.74
-2016,March,All opioids,NSW,138.0,1.78
-2016,March,All opioids,NT,,
-2016,March,All opioids,QLD,151.0,3.12
-2016,March,All opioids,TAS,15.0,2.9
-2016,March,All opioids,VIC,84.0,1.36
-2016,March,Amphetamines (any),ACT,9.0,2.23
-2016,March,Amphetamines (any),NSW,266.0,3.44
-2016,March,Amphetamines (any),NT,,
-2016,March,Amphetamines (any),QLD,299.0,6.17
-2016,March,Amphetamines (any),TAS,14.0,2.71
-2016,March,Amphetamines (any),VIC,369.0,5.98
-2016,March,Benzodiazepines,ACT,17.0,4.22
-2016,March,Benzodiazepines,NSW,245.0,3.17
+2015,March,Heroin,QLD,42,0.88
+2015,March,Heroin,TAS,,
+2015,March,Heroin,VIC,204,3.39
+2016,March,Alcohol intoxication,ACT,142,35.23
+2016,March,Alcohol intoxication,NSW,1704,22.04
+2016,March,Alcohol intoxication,NT,291,118.45
+2016,March,Alcohol intoxication,QLD,2824,58.29
+2016,March,Alcohol intoxication,TAS,194,37.49
+2016,March,Alcohol intoxication,VIC,2000,32.4
+2016,March,All opioids,ACT,7,1.74
+2016,March,All opioids,NSW,138,1.78
+2016,March,All opioids,NT,,
+2016,March,All opioids,QLD,151,3.12
+2016,March,All opioids,TAS,15,2.9
+2016,March,All opioids,VIC,84,1.36
+2016,March,Amphetamines ,ACT,9,2.23
+2016,March,Amphetamines ,NSW,266,3.44
+2016,March,Amphetamines ,NT,,
+2016,March,Amphetamines ,QLD,299,6.17
+2016,March,Amphetamines ,TAS,14,2.71
+2016,March,Amphetamines ,VIC,369,5.98
+2016,March,Benzodiazepines,ACT,17,4.22
+2016,March,Benzodiazepines,NSW,245,3.17
 2016,March,Benzodiazepines,NT,,
-2016,March,Benzodiazepines,QLD,417.0,8.61
-2016,March,Benzodiazepines,TAS,25.0,4.83
-2016,March,Benzodiazepines,VIC,364.0,5.9
-2016,March,Cannabis,ACT,7.0,1.74
-2016,March,Cannabis,NSW,223.0,2.88
-2016,March,Cannabis,NT,21.0,8.55
-2016,March,Cannabis,QLD,281.0,5.8
-2016,March,Cannabis,TAS,36.0,6.96
-2016,March,Cannabis,VIC,236.0,3.82
-2016,March,Heroin,ACT,17.0,4.22
-2016,March,Heroin,NSW,91.0,1.18
-2016,March,Heroin,NT,0.0,
-2016,March,Heroin,QLD,39.0,0.8
-2016,March,Heroin,TAS,0.0,
-2016,March,Heroin,VIC,233.0,3.77
-2017,March,Alcohol intoxication,ACT,151.0,36.38
-2017,March,Alcohol intoxication,NSW,1832.0,23.32
-2017,March,Alcohol intoxication,NT,392.0,158.44
-2017,March,Alcohol intoxication,QLD,,
-2017,March,Alcohol intoxication,TAS,235.0,44.61
-2017,March,Alcohol intoxication,VIC,2045.0,32.45
-2017,March,All opioids,ACT,,
-2017,March,All opioids,NSW,114.0,1.45
-2017,March,All opioids,NT,,
-2017,March,All opioids,QLD,,
-2017,March,All opioids,TAS,13.0,2.47
-2017,March,All opioids,VIC,126.0,2.0
-2017,March,Amphetamines (any),ACT,8.0,1.93
-2017,March,Amphetamines (any),NSW,215.0,2.74
-2017,March,Amphetamines (any),NT,,
-2017,March,Amphetamines (any),QLD,,
-2017,March,Amphetamines (any),TAS,15.0,2.85
-2017,March,Amphetamines (any),VIC,209.0,3.32
-2017,March,Benzodiazepines,ACT,23.0,5.54
-2017,March,Benzodiazepines,NSW,266.0,3.39
-2017,March,Benzodiazepines,NT,0.0,0.0
+2016,March,Benzodiazepines,QLD,417,8.61
+2016,March,Benzodiazepines,TAS,25,4.83
+2016,March,Benzodiazepines,VIC,364,5.9
+2016,March,Cannabis,ACT,7,1.74
+2016,March,Cannabis,NSW,223,2.88
+2016,March,Cannabis,NT,21,8.55
+2016,March,Cannabis,QLD,281,5.8
+2016,March,Cannabis,TAS,36,6.96
+2016,March,Cannabis,VIC,236,3.82
+2016,March,Heroin,ACT,17,4.22
+2016,March,Heroin,NSW,91,1.18
+2016,March,Heroin,NT,,
+2016,March,Heroin,QLD,39,0.8
+2016,March,Heroin,TAS,,
+2016,March,Heroin,VIC,233,3.77
+2017,March,Alcohol intoxication,ACT,151,36.38
+2017,March,Alcohol intoxication,NSW,1832,23.32
+2017,March,Alcohol intoxication,NT,392,158.44
+2017,March,Alcohol intoxication,QLD,,
+2017,March,Alcohol intoxication,TAS,235,44.61
+2017,March,Alcohol intoxication,VIC,2045,32.45
+2017,March,All opioids,ACT,,
+2017,March,All opioids,NSW,114,1.45
+2017,March,All opioids,NT,,
+2017,March,All opioids,QLD,,
+2017,March,All opioids,TAS,13,2.47
+2017,March,All opioids,VIC,126,2
+2017,March,Amphetamines ,ACT,8,1.93
+2017,March,Amphetamines ,NSW,215,2.74
+2017,March,Amphetamines ,NT,,
+2017,March,Amphetamines ,QLD,,
+2017,March,Amphetamines ,TAS,15,2.85
+2017,March,Amphetamines ,VIC,209,3.32
+2017,March,Benzodiazepines,ACT,23,5.54
+2017,March,Benzodiazepines,NSW,266,3.39
+2017,March,Benzodiazepines,NT,,
 2017,March,Benzodiazepines,QLD,,
-2017,March,Benzodiazepines,TAS,32.0,6.07
-2017,March,Benzodiazepines,VIC,379.0,6.01
-2017,March,Cannabis,ACT,9.0,2.17
-2017,March,Cannabis,NSW,259.0,3.3
-2017,March,Cannabis,NT,31.0,12.53
+2017,March,Benzodiazepines,TAS,32,6.07
+2017,March,Benzodiazepines,VIC,379,6.01
+2017,March,Cannabis,ACT,9,2.17
+2017,March,Cannabis,NSW,259,3.3
+2017,March,Cannabis,NT,31,12.53
 2017,March,Cannabis,QLD,,
-2017,March,Cannabis,TAS,29.0,5.51
-2017,March,Cannabis,VIC,241.0,3.82
-2017,March,Heroin,ACT,13.0,3.13
-2017,March,Heroin,NSW,126.0,1.6
-2017,March,Heroin,NT,0.0,
+2017,March,Cannabis,TAS,29,5.51
+2017,March,Cannabis,VIC,241,3.82
+2017,March,Heroin,ACT,13,3.13
+2017,March,Heroin,NSW,126,1.6
+2017,March,Heroin,NT,,
 2017,March,Heroin,QLD,,
 2017,March,Heroin,TAS,,
-2017,March,Heroin,VIC,253.0,4.01
-2018,March,Alcohol intoxication,ACT,150.0,35.2
-2018,March,Alcohol intoxication,NSW,2388.0,30.02
-2018,March,Alcohol intoxication,NT,439.0,177.66
-2018,March,Alcohol intoxication,QLD,,
-2018,March,Alcohol intoxication,TAS,221.0,41.13
-2018,March,Alcohol intoxication,VIC,2404.0,37.43
-2018,March,All opioids,ACT,5.0,1.17
-2018,March,All opioids,NSW,118.0,1.48
-2018,March,All opioids,NT,6.0,2.43
-2018,March,All opioids,QLD,,
-2018,March,All opioids,TAS,12.0,2.23
-2018,March,All opioids,VIC,102.0,1.59
-2018,March,Amphetamines (any),ACT,8.0,1.88
-2018,March,Amphetamines (any),NSW,250.0,3.14
-2018,March,Amphetamines (any),NT,6.0,2.43
-2018,March,Amphetamines (any),QLD,,
-2018,March,Amphetamines (any),TAS,20.0,3.72
-2018,March,Amphetamines (any),VIC,343.0,5.34
-2018,March,Benzodiazepines,ACT,15.0,3.52
-2018,March,Benzodiazepines,NSW,271.0,3.41
-2018,March,Benzodiazepines,NT,6.0,2.43
+2017,March,Heroin,VIC,253,4.01
+2018,March,Alcohol intoxication,ACT,150,35.2
+2018,March,Alcohol intoxication,NSW,2388,30.02
+2018,March,Alcohol intoxication,NT,439,177.66
+2018,March,Alcohol intoxication,QLD,,
+2018,March,Alcohol intoxication,TAS,221,41.13
+2018,March,Alcohol intoxication,VIC,2404,37.43
+2018,March,All opioids,ACT,5,1.17
+2018,March,All opioids,NSW,118,1.48
+2018,March,All opioids,NT,6,2.43
+2018,March,All opioids,QLD,,
+2018,March,All opioids,TAS,12,2.23
+2018,March,All opioids,VIC,102,1.59
+2018,March,Amphetamines ,ACT,8,1.88
+2018,March,Amphetamines ,NSW,250,3.14
+2018,March,Amphetamines ,NT,6,2.43
+2018,March,Amphetamines ,QLD,,
+2018,March,Amphetamines ,TAS,20,3.72
+2018,March,Amphetamines ,VIC,343,5.34
+2018,March,Benzodiazepines,ACT,15,3.52
+2018,March,Benzodiazepines,NSW,271,3.41
+2018,March,Benzodiazepines,NT,6,2.43
 2018,March,Benzodiazepines,QLD,,
-2018,March,Benzodiazepines,TAS,18.0,3.35
-2018,March,Benzodiazepines,VIC,423.0,6.59
-2018,March,Cannabis,ACT,10.0,2.35
-2018,March,Cannabis,NSW,248.0,3.12
-2018,March,Cannabis,NT,41.0,16.59
+2018,March,Benzodiazepines,TAS,18,3.35
+2018,March,Benzodiazepines,VIC,423,6.59
+2018,March,Cannabis,ACT,10,2.35
+2018,March,Cannabis,NSW,248,3.12
+2018,March,Cannabis,NT,41,16.59
 2018,March,Cannabis,QLD,,
-2018,March,Cannabis,TAS,33.0,6.14
-2018,March,Cannabis,VIC,282.0,4.39
-2018,March,Heroin,ACT,18.0,4.22
-2018,March,Heroin,NSW,107.0,1.35
-2018,March,Heroin,NT,0.0,
+2018,March,Cannabis,TAS,33,6.14
+2018,March,Cannabis,VIC,282,4.39
+2018,March,Heroin,ACT,18,4.22
+2018,March,Heroin,NSW,107,1.35
+2018,March,Heroin,NT,,
 2018,March,Heroin,QLD,,
 2018,March,Heroin,TAS,,
-2018,March,Heroin,VIC,227.0,3.53
-2019,March,Alcohol intoxication,ACT,183.0,42.0
-2019,March,Alcohol intoxication,NSW,2923.0,36.33
-2019,March,Alcohol intoxication,NT,,
-2019,March,Alcohol intoxication,QLD,,
-2019,March,Alcohol intoxication,TAS,196.0,35.78
-2019,March,Alcohol intoxication,VIC,2707.0,41.41
-2019,March,All opioids,ACT,,
-2019,March,All opioids,NSW,123.0,1.53
-2019,March,All opioids,NT,,
-2019,March,All opioids,QLD,,
-2019,March,All opioids,TAS,11.0,2.01
-2019,March,All opioids,VIC,108.0,1.65
-2019,March,Amphetamines (any),ACT,19.0,4.36
-2019,March,Amphetamines (any),NSW,366.0,4.55
-2019,March,Amphetamines (any),NT,,
-2019,March,Amphetamines (any),QLD,,
-2019,March,Amphetamines (any),TAS,23.0,4.2
-2019,March,Amphetamines (any),VIC,395.0,6.04
-2019,March,Benzodiazepines,ACT,18.0,4.13
-2019,March,Benzodiazepines,NSW,320.0,3.98
+2018,March,Heroin,VIC,227,3.53
+2019,March,Alcohol intoxication,ACT,183,42
+2019,March,Alcohol intoxication,NSW,2923,36.33
+2019,March,Alcohol intoxication,NT,,
+2019,March,Alcohol intoxication,QLD,,
+2019,March,Alcohol intoxication,TAS,196,35.78
+2019,March,Alcohol intoxication,VIC,2707,41.41
+2019,March,All opioids,ACT,,
+2019,March,All opioids,NSW,123,1.53
+2019,March,All opioids,NT,,
+2019,March,All opioids,QLD,,
+2019,March,All opioids,TAS,11,2.01
+2019,March,All opioids,VIC,108,1.65
+2019,March,Amphetamines ,ACT,19,4.36
+2019,March,Amphetamines ,NSW,366,4.55
+2019,March,Amphetamines ,NT,,
+2019,March,Amphetamines ,QLD,,
+2019,March,Amphetamines ,TAS,23,4.2
+2019,March,Amphetamines ,VIC,395,6.04
+2019,March,Benzodiazepines,ACT,18,4.13
+2019,March,Benzodiazepines,NSW,320,3.98
 2019,March,Benzodiazepines,NT,,
 2019,March,Benzodiazepines,QLD,,
-2019,March,Benzodiazepines,TAS,16.0,2.92
-2019,March,Benzodiazepines,VIC,436.0,6.67
-2019,March,Cannabis,ACT,20.0,4.59
-2019,March,Cannabis,NSW,353.0,4.39
+2019,March,Benzodiazepines,TAS,16,2.92
+2019,March,Benzodiazepines,VIC,436,6.67
+2019,March,Cannabis,ACT,20,4.59
+2019,March,Cannabis,NSW,353,4.39
 2019,March,Cannabis,NT,,
 2019,March,Cannabis,QLD,,
-2019,March,Cannabis,TAS,45.0,8.21
-2019,March,Cannabis,VIC,317.0,4.85
-2019,March,Heroin,ACT,24.0,5.51
-2019,March,Heroin,NSW,177.0,2.2
+2019,March,Cannabis,TAS,45,8.21
+2019,March,Cannabis,VIC,317,4.85
+2019,March,Heroin,ACT,24,5.51
+2019,March,Heroin,NSW,177,2.2
 2019,March,Heroin,NT,,
 2019,March,Heroin,QLD,,
 2019,March,Heroin,TAS,,
-2019,March,Heroin,VIC,322.0,4.93
-2020,March,Alcohol intoxication,ACT,191.0,42.93
-2020,March,Alcohol intoxication,NSW,2697.0,33.25
-2020,March,Alcohol intoxication,NT,,
-2020,March,Alcohol intoxication,QLD,2096.0,40.58
-2020,March,Alcohol intoxication,TAS,175.0,31.39
-2020,March,Alcohol intoxication,VIC,2565.0,38.78
-2020,March,All opioids,ACT,4.0,0.9
-2020,March,All opioids,NSW,96.0,1.18
-2020,March,All opioids,NT,,
-2020,March,All opioids,QLD,133.0,2.57
-2020,March,All opioids,TAS,5.0,0.9
-2020,March,All opioids,VIC,122.0,1.84
-2020,March,Amphetamines (any),ACT,24.0,5.39
-2020,March,Amphetamines (any),NSW,435.0,5.36
-2020,March,Amphetamines (any),NT,,
-2020,March,Amphetamines (any),QLD,457.0,8.85
-2020,March,Amphetamines (any),TAS,20.0,3.59
-2020,March,Amphetamines (any),VIC,515.0,7.79
-2020,March,Benzodiazepines,ACT,24.0,5.39
-2020,March,Benzodiazepines,NSW,364.0,4.49
+2019,March,Heroin,VIC,322,4.93
+2020,March,Alcohol intoxication,ACT,191,42.93
+2020,March,Alcohol intoxication,NSW,2697,33.25
+2020,March,Alcohol intoxication,NT,,
+2020,March,Alcohol intoxication,QLD,2096,40.58
+2020,March,Alcohol intoxication,TAS,175,31.39
+2020,March,Alcohol intoxication,VIC,2565,38.78
+2020,March,All opioids,ACT,4,0.9
+2020,March,All opioids,NSW,96,1.18
+2020,March,All opioids,NT,,
+2020,March,All opioids,QLD,133,2.57
+2020,March,All opioids,TAS,5,0.9
+2020,March,All opioids,VIC,122,1.84
+2020,March,Amphetamines ,ACT,24,5.39
+2020,March,Amphetamines ,NSW,435,5.36
+2020,March,Amphetamines ,NT,,
+2020,March,Amphetamines ,QLD,457,8.85
+2020,March,Amphetamines ,TAS,20,3.59
+2020,March,Amphetamines ,VIC,515,7.79
+2020,March,Benzodiazepines,ACT,24,5.39
+2020,March,Benzodiazepines,NSW,364,4.49
 2020,March,Benzodiazepines,NT,,
-2020,March,Benzodiazepines,QLD,372.0,7.2
-2020,March,Benzodiazepines,TAS,16.0,2.87
-2020,March,Benzodiazepines,VIC,413.0,6.24
-2020,March,Cannabis,ACT,32.0,7.19
-2020,March,Cannabis,NSW,454.0,5.6
+2020,March,Benzodiazepines,QLD,372,7.2
+2020,March,Benzodiazepines,TAS,16,2.87
+2020,March,Benzodiazepines,VIC,413,6.24
+2020,March,Cannabis,ACT,32,7.19
+2020,March,Cannabis,NSW,454,5.6
 2020,March,Cannabis,NT,,
-2020,March,Cannabis,QLD,362.0,7.01
-2020,March,Cannabis,TAS,33.0,5.92
-2020,March,Cannabis,VIC,340.0,5.14
-2020,March,Heroin,ACT,21.0,4.72
-2020,March,Heroin,NSW,167.0,2.06
+2020,March,Cannabis,QLD,362,7.01
+2020,March,Cannabis,TAS,33,5.92
+2020,March,Cannabis,VIC,340,5.14
+2020,March,Heroin,ACT,21,4.72
+2020,March,Heroin,NSW,167,2.06
 2020,March,Heroin,NT,,
-2020,March,Heroin,QLD,57.0,1.1
-2020,March,Heroin,TAS,0.0,
-2020,March,Heroin,VIC,286.0,4.32
-2021,March,Alcohol intoxication,ACT,230.0,50.83
-2021,March,Alcohol intoxication,NSW,2992.0,36.95
-2021,March,Alcohol intoxication,NT,462.0,186.18
-2021,March,Alcohol intoxication,QLD,2435.0,46.68
-2021,March,Alcohol intoxication,TAS,177.0,31.2
-2021,March,Alcohol intoxication,VIC,2601.0,39.72
-2021,March,All opioids,ACT,20.0,4.42
-2021,March,All opioids,NSW,151.0,1.86
-2021,March,All opioids,NT,,
-2021,March,All opioids,QLD,182.0,3.49
-2021,March,All opioids,TAS,15.0,2.64
-2021,March,All opioids,VIC,124.0,1.89
-2021,March,Amphetamines (any),ACT,24.0,5.3
-2021,March,Amphetamines (any),NSW,434.0,5.36
-2021,March,Amphetamines (any),NT,25.0,10.07
-2021,March,Amphetamines (any),QLD,356.0,6.83
-2021,March,Amphetamines (any),TAS,27.0,4.76
-2021,March,Amphetamines (any),VIC,464.0,7.09
-2021,March,Benzodiazepines,ACT,27.0,5.97
-2021,March,Benzodiazepines,NSW,354.0,4.37
+2020,March,Heroin,QLD,57,1.1
+2020,March,Heroin,TAS,,
+2020,March,Heroin,VIC,286,4.32
+2021,March,Alcohol intoxication,ACT,230,50.83
+2021,March,Alcohol intoxication,NSW,2992,36.95
+2021,March,Alcohol intoxication,NT,462,186.18
+2021,March,Alcohol intoxication,QLD,2435,46.68
+2021,March,Alcohol intoxication,TAS,177,31.2
+2021,March,Alcohol intoxication,VIC,2601,39.72
+2021,March,All opioids,ACT,20,4.42
+2021,March,All opioids,NSW,151,1.86
+2021,March,All opioids,NT,,
+2021,March,All opioids,QLD,182,3.49
+2021,March,All opioids,TAS,15,2.64
+2021,March,All opioids,VIC,124,1.89
+2021,March,Amphetamines ,ACT,24,5.3
+2021,March,Amphetamines ,NSW,434,5.36
+2021,March,Amphetamines ,NT,25,10.07
+2021,March,Amphetamines ,QLD,356,6.83
+2021,March,Amphetamines ,TAS,27,4.76
+2021,March,Amphetamines ,VIC,464,7.09
+2021,March,Benzodiazepines,ACT,27,5.97
+2021,March,Benzodiazepines,NSW,354,4.37
 2021,March,Benzodiazepines,NT,,
-2021,March,Benzodiazepines,QLD,428.0,8.21
-2021,March,Benzodiazepines,TAS,20.0,3.53
-2021,March,Benzodiazepines,VIC,398.0,6.08
-2021,March,Cannabis,ACT,42.0,9.28
-2021,March,Cannabis,NSW,478.0,5.9
-2021,March,Cannabis,NT,47.0,18.94
-2021,March,Cannabis,QLD,360.0,6.9
-2021,March,Cannabis,TAS,40.0,7.05
-2021,March,Cannabis,VIC,373.0,5.7
-2021,March,Heroin,ACT,20.0,4.42
-2021,March,Heroin,NSW,113.0,1.4
-2021,March,Heroin,NT,0.0,0.0
-2021,March,Heroin,QLD,20.0,0.38
+2021,March,Benzodiazepines,QLD,428,8.21
+2021,March,Benzodiazepines,TAS,20,3.53
+2021,March,Benzodiazepines,VIC,398,6.08
+2021,March,Cannabis,ACT,42,9.28
+2021,March,Cannabis,NSW,478,5.9
+2021,March,Cannabis,NT,47,18.94
+2021,March,Cannabis,QLD,360,6.9
+2021,March,Cannabis,TAS,40,7.05
+2021,March,Cannabis,VIC,373,5.7
+2021,March,Heroin,ACT,20,4.42
+2021,March,Heroin,NSW,113,1.4
+2021,March,Heroin,NT,,
+2021,March,Heroin,QLD,20,0.38
 2021,March,Heroin,TAS,,
-2021,March,Heroin,VIC,180.0,2.75
-2022,March,Alcohol intoxication,ACT,174.0,38.08
-2022,March,Alcohol intoxication,NSW,2675.0,32.75
-2022,March,Alcohol intoxication,NT,402.0,160.65
-2022,March,Alcohol intoxication,QLD,2370.0,44.54
-2022,March,Alcohol intoxication,TAS,259.0,45.35
-2022,March,Alcohol intoxication,VIC,2180.0,32.88
-2022,March,All opioids,ACT,9.0,1.97
-2022,March,All opioids,NSW,114.0,1.4
-2022,March,All opioids,NT,6.0,2.4
-2022,March,All opioids,QLD,175.0,3.29
-2022,March,All opioids,TAS,18.0,3.15
-2022,March,All opioids,VIC,121.0,1.82
-2022,March,Amphetamines (any),ACT,15.0,3.28
-2022,March,Amphetamines (any),NSW,354.0,4.33
-2022,March,Amphetamines (any),NT,5.0,2.0
-2022,March,Amphetamines (any),QLD,313.0,5.88
-2022,March,Amphetamines (any),TAS,21.0,3.68
-2022,March,Amphetamines (any),VIC,444.0,6.7
-2022,March,Benzodiazepines,ACT,24.0,5.25
-2022,March,Benzodiazepines,NSW,268.0,3.28
+2021,March,Heroin,VIC,180,2.75
+2022,March,Alcohol intoxication,ACT,174,38.08
+2022,March,Alcohol intoxication,NSW,2675,32.75
+2022,March,Alcohol intoxication,NT,402,160.65
+2022,March,Alcohol intoxication,QLD,2370,44.54
+2022,March,Alcohol intoxication,TAS,259,45.35
+2022,March,Alcohol intoxication,VIC,2180,32.88
+2022,March,All opioids,ACT,9,1.97
+2022,March,All opioids,NSW,114,1.4
+2022,March,All opioids,NT,6,2.4
+2022,March,All opioids,QLD,175,3.29
+2022,March,All opioids,TAS,18,3.15
+2022,March,All opioids,VIC,121,1.82
+2022,March,Amphetamines ,ACT,15,3.28
+2022,March,Amphetamines ,NSW,354,4.33
+2022,March,Amphetamines ,NT,5,2
+2022,March,Amphetamines ,QLD,313,5.88
+2022,March,Amphetamines ,TAS,21,3.68
+2022,March,Amphetamines ,VIC,444,6.7
+2022,March,Benzodiazepines,ACT,24,5.25
+2022,March,Benzodiazepines,NSW,268,3.28
 2022,March,Benzodiazepines,NT,,
-2022,March,Benzodiazepines,QLD,307.0,5.77
-2022,March,Benzodiazepines,TAS,28.0,4.9
-2022,March,Benzodiazepines,VIC,358.0,5.4
-2022,March,Cannabis,ACT,30.0,6.57
-2022,March,Cannabis,NSW,454.0,5.56
-2022,March,Cannabis,NT,51.0,20.38
-2022,March,Cannabis,QLD,412.0,7.74
-2022,March,Cannabis,TAS,48.0,8.41
-2022,March,Cannabis,VIC,366.0,5.52
-2022,March,Heroin,ACT,22.0,4.81
-2022,March,Heroin,NSW,163.0,2.0
+2022,March,Benzodiazepines,QLD,307,5.77
+2022,March,Benzodiazepines,TAS,28,4.9
+2022,March,Benzodiazepines,VIC,358,5.4
+2022,March,Cannabis,ACT,30,6.57
+2022,March,Cannabis,NSW,454,5.56
+2022,March,Cannabis,NT,51,20.38
+2022,March,Cannabis,QLD,412,7.74
+2022,March,Cannabis,TAS,48,8.41
+2022,March,Cannabis,VIC,366,5.52
+2022,March,Heroin,ACT,22,4.81
+2022,March,Heroin,NSW,163,2
 2022,March,Heroin,NT,,
-2022,March,Heroin,QLD,45.0,0.85
+2022,March,Heroin,QLD,45,0.85
 2022,March,Heroin,TAS,,
-2022,March,Heroin,VIC,250.0,3.77
-2023,March,Alcohol intoxication,ACT,207.0,44.34
-2023,March,Alcohol intoxication,NSW,2745.0,32.92
-2023,March,Alcohol intoxication,NT,479.0,189.72
-2023,March,Alcohol intoxication,QLD,2577.0,47.2
-2023,March,Alcohol intoxication,TAS,276.0,48.19
-2023,March,Alcohol intoxication,VIC,2228.0,32.7
-2023,March,All opioids,ACT,11.0,2.36
-2023,March,All opioids,NSW,101.0,1.21
-2023,March,All opioids,NT,5.0,1.98
-2023,March,All opioids,QLD,160.0,2.93
-2023,March,All opioids,TAS,19.0,3.32
-2023,March,All opioids,VIC,98.0,1.44
-2023,March,Amphetamines (any),ACT,23.0,4.93
-2023,March,Amphetamines (any),NSW,390.0,4.68
-2023,March,Amphetamines (any),NT,12.0,4.75
-2023,March,Amphetamines (any),QLD,362.0,6.63
-2023,March,Amphetamines (any),TAS,35.0,6.11
-2023,March,Amphetamines (any),VIC,402.0,5.9
-2023,March,Benzodiazepines,ACT,15.0,3.21
-2023,March,Benzodiazepines,NSW,236.0,2.83
+2022,March,Heroin,VIC,250,3.77
+2023,March,Alcohol intoxication,ACT,207,44.34
+2023,March,Alcohol intoxication,NSW,2745,32.92
+2023,March,Alcohol intoxication,NT,479,189.72
+2023,March,Alcohol intoxication,QLD,2577,47.2
+2023,March,Alcohol intoxication,TAS,276,48.19
+2023,March,Alcohol intoxication,VIC,2228,32.7
+2023,March,All opioids,ACT,11,2.36
+2023,March,All opioids,NSW,101,1.21
+2023,March,All opioids,NT,5,1.98
+2023,March,All opioids,QLD,160,2.93
+2023,March,All opioids,TAS,19,3.32
+2023,March,All opioids,VIC,98,1.44
+2023,March,Amphetamines ,ACT,23,4.93
+2023,March,Amphetamines ,NSW,390,4.68
+2023,March,Amphetamines ,NT,12,4.75
+2023,March,Amphetamines ,QLD,362,6.63
+2023,March,Amphetamines ,TAS,35,6.11
+2023,March,Amphetamines ,VIC,402,5.9
+2023,March,Benzodiazepines,ACT,15,3.21
+2023,March,Benzodiazepines,NSW,236,2.83
 2023,March,Benzodiazepines,NT,,
-2023,March,Benzodiazepines,QLD,261.0,4.78
-2023,March,Benzodiazepines,TAS,26.0,4.54
-2023,March,Benzodiazepines,VIC,297.0,4.36
-2023,March,Cannabis,ACT,30.0,6.43
-2023,March,Cannabis,NSW,481.0,5.77
-2023,March,Cannabis,NT,69.0,27.33
-2023,March,Cannabis,QLD,451.0,8.26
-2023,March,Cannabis,TAS,74.0,12.92
-2023,March,Cannabis,VIC,337.0,4.95
-2023,March,Heroin,ACT,15.0,3.21
-2023,March,Heroin,NSW,85.0,1.02
-2023,March,Heroin,NT,0.0,0.0
-2023,March,Heroin,QLD,26.0,0.48
+2023,March,Benzodiazepines,QLD,261,4.78
+2023,March,Benzodiazepines,TAS,26,4.54
+2023,March,Benzodiazepines,VIC,297,4.36
+2023,March,Cannabis,ACT,30,6.43
+2023,March,Cannabis,NSW,481,5.77
+2023,March,Cannabis,NT,69,27.33
+2023,March,Cannabis,QLD,451,8.26
+2023,March,Cannabis,TAS,74,12.92
+2023,March,Cannabis,VIC,337,4.95
+2023,March,Heroin,ACT,15,3.21
+2023,March,Heroin,NSW,85,1.02
+2023,March,Heroin,NT,,
+2023,March,Heroin,QLD,26,0.48
 2023,March,Heroin,TAS,,
-2023,March,Heroin,VIC,180.0,2.64
+2023,March,Heroin,VIC,180,2.64

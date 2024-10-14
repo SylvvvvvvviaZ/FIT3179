@@ -18,7 +18,6 @@
       "bind": {
         "input": "select",
         "options": [
-          null,
           "ACT",
           "NSW",
           "NT",
@@ -26,7 +25,6 @@
           "VIC"
         ],
         "labels": [
-          "Show All",
           "ACT",
           "NSW",
           "NT",
@@ -46,22 +44,18 @@
     {
       "encoding": {
         "x": {
-          "field": "Number",
-          "type": "quantitative",
-          "title": "Number of Incidents",
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year",
           "axis": {
-            "grid": true,
             "labelFontSize": 14,
             "titleFontSize": 12
-          },
-          "scale": {
-            "nice": true
           }
         },
         "y": {
-          "field": "Rate",
-          "type": "quantitative",
-          "title": "Crude Rate of Incidents (per 100,000 Population)",
+          "field": "Number",
+            "type": "quantitative",
+            "title": "Number of Incidents",
           "axis": {
             "grid": true,
             "labelFontSize": 14,
@@ -91,8 +85,8 @@
           "type": "quantitative",
           "scale": {
             "range": [
-              70,
-              300
+              30,
+              100
             ]
           },
           "legend": {
@@ -109,11 +103,6 @@
             "field": "Year",
             "type": "ordinal",
             "title": "Year"
-          },
-          {
-            "field": "Month",
-            "type": "ordinal",
-            "title": "Month"
           },
           {
             "field": "Type",
