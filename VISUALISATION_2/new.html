@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
 </head>
 
@@ -22,22 +23,77 @@
         <h1>Alcohol, Tobacco, and Other Drugs Impacts in Australia</h1>
 
         <div class="description">
-            <p>The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
-                regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
-                This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b>alcohol</b> use, affecting public health outcomes worldwide.</p>
+            <p>The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends.</p>
         </div>
+
+        <!-- Visualization Group -->
         <div class="pure-g vis-group">
-            <div class="pure-u-1-1 vis-container" id="vis1"></div>
-            <div class="pure-u-1-1 vis-container" id="vis2"></div>
-            <div class="pure-u-1-1 vis-container" id="vis3"></div>
+
+            <!-- Vis1, Vis2, Vis3 with selection button on the left -->
+            <div class="pure-u-1-1">
+                <h2>11111111The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
+                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <div class="pure-g">
+                    <!-- Selection Buttons on the left -->
+                    <div class="pure-u-1-4">
+                        <form id="vis-selection-form">
+                            <label><input type="radio" name="vis123" value="vis1" checked> Vis1</label><br>
+                            <label><input type="radio" name="vis123" value="vis2"> Vis2</label><br>
+                            <label><input type="radio" name="vis123" value="vis3"> Vis3</label>
+                        </form>
+                    </div>
+                    <!-- Visualization container on the right -->
+                    <div class="pure-u-3-4" id="vis123-container">
+                        <div id="vis1"></div>
+                        <div id="vis2" style="display:none;"></div>
+                        <div id="vis3" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vis4 on the right with text "222" on the left -->
+            <div class="pure-u-1-1">
+                <h2>The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
+                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <div id="vis4"></div>
+            </div>
+
+            <!-- Vis5 in the middle with text "333" above -->
+            <div class="pure-u-1-1">
+                <h2>555The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
+                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <div id="vis5"></div>
+            </div>
+
+            <!-- Vis6 on the left with text "444" on the right -->
+            <div class="pure-u-1-1">
+                <h2>555The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
+                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <div id="vis6"></div>
+            </div>
+
+            <!-- Vis7 in the middle with text "555" above -->
+            <div class="pure-u-1-1">
+                <h2>555The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
+                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <div id="vis7"></div>
+            </div>
+
         </div>
 
         <p class="small-font">This dashboard is created using Vega-Lite visualizations. The data is sourced from the
-            Australian Institute of Health and Welfare：https://www.aihw.gov.au/reports/alcohol/alcohol-tobacco-other-drugs-australia/data.</p>
+            Australian Institute of Health and Welfare:
+            https://www.aihw.gov.au/reports/alcohol/alcohol-tobacco-other-drugs-australia/data.</p>
 
     </div> <!-- end page -->
 
     <script type="text/javascript">
+        // Visualization specifications
         var specVis1 = "js/Proportion_who_smoke_daily.vg.json";
         var specVis2 = "js/Alcohol_consumption_per_capitaof_pure_alcohol.vg.json";
         var specVis3 = "js/Number_of_cigarettes_smoked_per_day.vg.json";
@@ -46,33 +102,25 @@
         var specVis6 = "js/heatmap.vg.json";
         var specVis7 = "js/dountchart.vg.json";
 
-        vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
+        // Embed visualizations
+        vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis3', specVis3, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis4', specVis4, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis5', specVis5, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis6', specVis6, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis7', specVis7, { "actions": false }).catch(console.error);
 
-        vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis7', specVis7, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
+        // Event listener for Vis1, Vis2, Vis3 selection
+        document.getElementById('vis-selection-form').addEventListener('change', function (e) {
+            var selectedVis = document.querySelector('input[name="vis123"]:checked').value;
+            // Hide all visualizations
+            document.getElementById('vis1').style.display = 'none';
+            document.getElementById('vis2').style.display = 'none';
+            document.getElementById('vis3').style.display = 'none';
+            // Show selected visualization
+            document.getElementById(selectedVis).style.display = 'block';
+        });
     </script>
 </body>
 
