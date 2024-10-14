@@ -1,0 +1,145 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Number and Crude Rate of Drug-Related Ambulance Attendances by Drug Type and Jurisdiction in 2015–2023",
+      "fontSize": 14,
+      "fontWeight": "bold",
+      "anchor": "middle",
+      "color": "#000000"
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/drug_related_ambulance.csv"
+    },
+    "vconcat": [
+        {
+            "width": 800,
+            "height": 370,
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "timeUnit": "year",
+                    "title": "Year",
+                    "axis": {"format": "%Y"}
+                },
+                "y": {
+                    "title": "Number",
+                    "field": "Number",
+                    "type": "quantitative",
+                    "aggregate": "sum"
+                },
+                "color": {
+                    "condition": {
+                        "param": "brush",
+                        "title": "Type",
+                        "field": "Type",
+                        "type": "nominal",
+                        "scale": {
+                            "range": 
+                              ["#7D957F", "#80A688", "#C1D4C5", 
+                              "#C7D2DF", "#9CB4CE"
+                              ]
+                        }
+                    },
+                    "value": "gray"
+                },
+                "opacity": {
+                    "condition": {
+                        "param": "brush",
+                        "value": 1
+                    },
+                    "value": 0.5
+                }
+            },
+            "layer": [
+                {
+                    "params": [
+                        {
+                            "name": "brush",
+                            "select": {
+                                "type": "interval",
+                                "encodings": [
+                                    "x"
+                                ]
+                            }
+                        }
+                    ],
+                    "transform": [
+                        {
+                            "filter": {
+                                "param": "click"
+                            }
+                        }
+                    ],
+                    "mark": {
+                        "type": "line",
+                        "point": true,
+                        "tooltip": true,
+                        "strokeWidth": 7,
+                        "stroke": "transparent"
+                    }
+                },
+                {
+                    "mark": "line"
+                }
+            ]
+        },
+        {
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "click",
+                        "field": "Type",
+                        "scale": {
+                            "range": [
+                                "#6f1926",
+                                "#de324c",
+                                "#f4895f",
+                                "#f8e16f",
+                                "#95cf92",
+                                "#369acc",
+                                "#9656a2",
+                                "#cbabd1"
+                            ]
+                        }
+                    },
+                    "value": "gray"
+                },
+                "x": {
+                    "aggregate": "average",
+                    "type": "quantitative",
+                    "field": "Rate",
+                    "title": "Rate"
+                },
+                "y": {
+                    "title": "Type",
+                    "field": "Type",
+                    "type": "nominal"
+                }
+            },
+            "width": 800,
+            "height": 170,
+            "mark": {
+                "type": "bar",
+                "tooltip": true
+            },
+            "params": [
+                {
+                    "name": "click",
+                    "select": {
+                        "type": "interval",
+                        "encodings": [
+                            "color"
+                        ]
+                    }
+                }
+            ],
+            "transform": [
+                {
+                    "filter": {
+                        "param": "brush"
+                    }
+                }
+            ]
+        }
+    ]
+  }
