@@ -1,0 +1,203 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "title": {
+    "text": "Alcohol_deaths in 2015–2023",
+    "fontSize": 14,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#000000"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Alcohol_deaths.csv"
+  },
+  "params": [
+    {
+      "name": "Type",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All alcohol-induced deaths",
+          "Chronic alcohol-induced deaths",
+          "Acute alcohol-induced deaths"
+        ],
+        "labels": [
+          "All alcohol-induced deaths",
+          "Chronic alcohol-induced deaths",
+          "Acute alcohol-induced deaths"
+        ],
+        "name": "Type Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Type == null || datum.Type == Type"
+    }
+  ],
+  "layer": [
+    {
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "timeUnit": "year",
+          "title": "Year",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 12
+          }
+        },
+        "y": {
+          "field": "Death",
+          "type": "quantitative",
+          "title": "Death",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 12
+          }
+        },
+        "color": {
+          "field": "Age Group",
+          "type": "nominal",
+          "title": "Age Group",
+          "scale": {
+            "range": [
+              "#7D957F",
+              "#80A688",
+              "#C7D2DF",
+              "#9CB4CE",
+              "#DFC6C6",
+              "#CF9A9A"
+            ]
+          }
+        },
+        "size": {
+          "field": "Death",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              100,
+              300
+            ]
+          },
+          "legend": {
+            "title": "Death",
+            "titleFontSize": 11,
+            "labelFontSize": 10
+          }
+        },
+        "opacity": {
+          "value": 1
+        },
+        "tooltip": [
+          {
+            "field": "Age Group",
+            "type": "nominal",
+            "title": "Age Group"
+          },
+          {
+            "field": "Type",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "Death",
+            "type": "quantitative",
+            "title": "Death"
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "white",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 14,
+        "dx": -10,
+        "dy": -30
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "Notes:"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 11,
+        "dx": -10,
+        "dy": -10
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "1. Ambulance attendance numbers exclude 0–14, and not reported age groups."
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 11,
+        "dx": -10,
+        "dy": 10
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "2. Fewer patient care records were captured in June 2016 and 2021 in NSW; interpret cautiously."
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#868686",
+        "align": "right",
+        "fontSize": 11,
+        "dx": -10,
+        "dy": 30
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "3. Reduced ambulance attendances in NSW Jan-Feb 2023 due to system issues and paramedic strikes; interpret cautiously."
+        }
+      }
+    }
+  ]
+}

@@ -1,226 +1,153 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
-  "height": 600,
-  "title": {
-    "text": "Number and Crude Rate of Drug-Related Ambulance Attendances by Drug Type and Jurisdiction in 2015–2023",
-    "fontSize": 14,
-    "fontWeight": "bold",
-    "anchor": "middle",
-    "color": "#000000"
-  },
-  "data": {
-    "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/drug_related_ambulance.csv"
-  },
-  "params": [
-    {
-      "name": "State_selection",
-      "bind": {
-        "input": "select",
-        "options": [
-          null,
-          "ACT",
-          "NSW",
-          "NT",
-          "QLD",
-          "VIC"
-        ],
-        "labels": [
-          "Show All",
-          "ACT",
-          "NSW",
-          "NT",
-          "QLD",
-          "VIC"
-        ],
-        "name": "State Selection: "
-      }
-    }
-  ],
-  "transform": [
-    {
-      "filter": "State_selection == null || datum.State == State_selection"
-    }
-  ],
-  "layer": [
-    {
-      "encoding": {
-        "x": {
-          "field": "Number",
-          "type": "quantitative",
-          "title": "Number of Incidents",
-          "axis": {
-            "grid": true,
-            "labelFontSize": 14,
-            "titleFontSize": 12
-          },
-          "scale": {
-            "nice": true
-          }
-        },
-        "y": {
-          "field": "Rate",
-          "type": "quantitative",
-          "title": "Crude Rate of Incidents (per 100,000 Population)",
-          "axis": {
-            "grid": true,
-            "labelFontSize": 14,
-            "titleFontSize": 12
-          },
-          "scale": {
-            "nice": true
-          }
-        },
-        "color": {
-          "field": "Type",
-          "type": "nominal",
-          "title": "Incident Type",
-          "scale": {
-            "range": [
-              "#7D957F",
-              "#80A688",
-              "#C7D2DF",
-              "#9CB4CE",
-              "#DFC6C6",
-              "#CF9A9A"
-            ]
-          }
-        },
-        "size": {
-          "field": "Rate",
-          "type": "quantitative",
-          "scale": {
-            "range": [
-              70,
-              300
-            ]
-          },
-          "legend": {
-            "title": "Rate (Size)",
-            "titleFontSize": 11,
-            "labelFontSize": 10
-          }
-        },
-        "opacity": {
-          "value": 1
-        },
-        "tooltip": [
-          {
-            "field": "Year",
-            "type": "ordinal",
-            "title": "Year"
-          },
-          {
-            "field": "Type",
-            "type": "nominal",
-            "title": "Incident Type"
-          },
-          {
-            "field": "State",
-            "type": "nominal",
-            "title": "State"
-          },
-          {
-            "field": "Number",
-            "type": "quantitative",
-            "title": "Number of Incidents"
-          },
-          {
-            "field": "Rate",
-            "type": "quantitative",
-            "title": "Crude Rate of Incidents"
-          }
-        ]
-      },
-      "mark": {
-        "type": "circle",
-        "stroke": "white",
-        "strokeWidth": 0.7
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "color": "#868686",
-        "align": "right",
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Number and Crude Rate of Drug-Related Ambulance Attendances by Drug Type in 2015–2023",
         "fontSize": 14,
-        "dx": -10,
-        "dy": -30
-      },
-      "encoding": {
-        "x": {
-          "value": 800
-        },
-        "y": {
-          "value": 50
-        },
-        "text": {
-          "value": "Notes:"
-        }
-      }
+        "fontWeight": "bold",
+        "anchor": "middle",
+        "color": "#000000"
     },
-    {
-      "mark": {
-        "type": "text",
-        "color": "#868686",
-        "align": "right",
-        "fontSize": 11,
-        "dx": -10,
-        "dy": -10
-      },
-      "encoding": {
-        "x": {
-          "value": 800
-        },
-        "y": {
-          "value": 50
-        },
-        "text": {
-          "value": "1. Ambulance attendance numbers exclude 0–14, and not reported age groups."
-        }
-      }
+    "data": {
+        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Drug_related_ambulance_data.csv"
     },
-    {
-      "mark": {
-        "type": "text",
-        "color": "#868686",
-        "align": "right",
-        "fontSize": 11,
-        "dx": -10,
-        "dy": 10
-      },
-      "encoding": {
-        "x": {
-          "value": 800
+    "vconcat": [
+        {
+            "width": 600,
+            "height": 400,
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "timeUnit": "year",
+                    "title": "Year"
+                },
+                "y": {
+                    "title": "Number",
+                    "field": "Number",
+                    "type": "quantitative",
+                    "aggregate": "sum",
+                    "axis": {
+                        "format": ".0f"
+                    }
+                },
+                "color": {
+                    "condition": {
+                        "param": "brush",
+                        "title": "Type",
+                        "field": "Type",
+                        "type": "nominal",
+                        "scale": {
+                            "range": [
+                                "#4E79A7",
+                                "#9CB4CE",
+                                "#C7D2DF",
+                                "#CF9A9A",
+                                "#DFC6C6"
+                            ]
+                        }
+                    },
+                    "value": "gray"
+                },
+                "opacity": {
+                    "condition": {
+                        "param": "brush",
+                        "value": 1
+                    },
+                    "value": 0.3
+                }
+            },
+            "layer": [
+                {
+                    "params": [
+                        {
+                            "name": "brush",
+                            "select": {
+                                "type": "interval",
+                                "encodings": [
+                                    "x"
+                                ]
+                            }
+                        }
+                    ],
+                    "transform": [
+                        {
+                            "filter": {
+                                "param": "click"
+                            }
+                        }
+                    ],
+                    "mark": {
+                        "type": "line",
+                        "point": true,
+                        "tooltip": true,
+                        "strokeWidth": 7,
+                        "stroke": "transparent"
+                    }
+                },
+                {
+                    "mark": "line"
+                }
+            ]
         },
-        "y": {
-          "value": 50
-        },
-        "text": {
-          "value": "2. Fewer patient care records were captured in June 2016 and 2021 in NSW; interpret cautiously."
+        {
+            "encoding": {
+                "color": {
+                    "condition": {
+                        "param": "click",
+                        "field": "Type",
+                        "scale": {
+                            "range": [
+                                "#6f1926",
+                                "#de324c",
+                                "#f4895f",
+                                "#f8e16f",
+                                "#95cf92",
+                                "#369acc",
+                                "#9656a2",
+                                "#cbabd1"
+                            ]
+                        }
+                    },
+                    "value": "gray"
+                },
+                "x": {
+                    "aggregate": "average",
+                    "field": "Rate",
+                    "title": "Crude Rate (Per 100,000 population)",
+                    "type": "quantitative",
+                    "axis": {
+                        "format": ".2f"
+                    }
+                },
+                "y": {
+                    "title": "Type",
+                    "field": "Type",
+                    "type": "nominal"
+                }
+            },
+            "width": 600,
+            "height": 120,
+            "mark": {
+                "type": "bar",
+                "tooltip": true
+            },
+            "params": [
+                {
+                    "name": "click",
+                    "select": {
+                        "type": "interval",
+                        "encodings": [
+                            "color"
+                        ]
+                    }
+                }
+            ],
+            "transform": [
+                {
+                    "filter": {
+                        "param": "brush"
+                    }
+                }
+            ]
         }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "color": "#868686",
-        "align": "right",
-        "fontSize": 11,
-        "dx": -10,
-        "dy": 30
-      },
-      "encoding": {
-        "x": {
-          "value": 800
-        },
-        "y": {
-          "value": 50
-        },
-        "text": {
-          "value": "3. Reduced ambulance attendances in NSW Jan-Feb 2023 due to system issues and paramedic strikes; interpret cautiously."
-        }
-      }
-    }
-  ]
+    ]
 }

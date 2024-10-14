@@ -1,0 +1,18 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Alcohol_deaths.csv"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "Death",
+        "type": "quantitative"
+      }
+    }
+  }
+  

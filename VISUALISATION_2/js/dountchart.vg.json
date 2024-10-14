@@ -19,7 +19,7 @@
     ],
     "mark": {
       "type": "arc",
-      "innerRadius": 50,
+      "innerRadius": 85,
       "tooltip": true
     },
     "encoding": {
@@ -30,6 +30,7 @@
       "color": {
         "field": "Psychosocial risk factors",
         "type": "nominal",
+        "title": "Psychosocial Risk Factor",
         "legend": {
           "titleFontSize": 14,
           "labelFontSize": 12,
@@ -37,7 +38,7 @@
         },
         "scale": {
           "range": ["#7D957F", "#80A688", "#C1D4C5", 
-          "#C7D2DF", "#9CB4CE", "#4E79A7", "#dadae4",
+          "#4E79A7","#9CB4CE", "#C7D2DF", "#dadae4",
           "#DFC6C6", "#CF9A9A", "#AA4D4D"
           ]
         }
@@ -63,7 +64,7 @@
           "name": "Year Selection: "
         },
         "init": {
-          "Year": 2022
+          "Year": 2020
         }
       }
     }
