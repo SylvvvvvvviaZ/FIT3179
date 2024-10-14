@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
-  "height": 600,
+  "height": 500,
   "title": {
-    "text": "Alcohol_deaths in 2015–2023",
+    "text": "Alcohol-Induced Deaths by Age Group In 1997–2022",
     "fontSize": 14,
     "fontWeight": "bold",
     "anchor": "middle",
@@ -15,6 +15,7 @@
   "params": [
     {
       "name": "Type",
+      "value": "All alcohol-induced deaths",
       "bind": {
         "input": "select",
         "options": [
@@ -66,10 +67,9 @@
             "range": [
               "#7D957F",
               "#80A688",
-              "#C7D2DF",
               "#9CB4CE",
-              "#DFC6C6",
-              "#CF9A9A"
+              "#C7D2DF",
+              "#DFC6C6"
             ]
           }
         },
@@ -78,20 +78,20 @@
           "type": "quantitative",
           "scale": {
             "range": [
-              100,
-              300
+              50,
+              250
             ]
-          },
-          "legend": {
-            "title": "Death",
-            "titleFontSize": 11,
-            "labelFontSize": 10
           }
         },
         "opacity": {
           "value": 1
         },
         "tooltip": [
+          {
+            "field": "Year",
+            "timeUnit": "year",
+            "title": "Year"
+          },
           {
             "field": "Age Group",
             "type": "nominal",
@@ -118,9 +118,9 @@
     {
       "mark": {
         "type": "text",
-        "color": "#868686",
+        "color": "#AA4D4D",
         "align": "right",
-        "fontSize": 14,
+        "fontSize": 11,
         "dx": -10,
         "dy": -30
       },
@@ -139,9 +139,9 @@
     {
       "mark": {
         "type": "text",
-        "color": "#868686",
+        "color": "#AA4D4D",
         "align": "right",
-        "fontSize": 11,
+        "fontSize": 10,
         "dx": -10,
         "dy": -10
       },
@@ -153,16 +153,16 @@
           "value": 50
         },
         "text": {
-          "value": "1. Ambulance attendance numbers exclude 0–14, and not reported age groups."
+          "value": "1. Alcohol-induced deaths are directly linked to alcohol use from toxicology/pathology reports."
         }
       }
     },
     {
       "mark": {
         "type": "text",
-        "color": "#868686",
+        "color": "#AA4D4D",
         "align": "right",
-        "fontSize": 11,
+        "fontSize": 10,
         "dx": -10,
         "dy": 10
       },
@@ -174,28 +174,7 @@
           "value": 50
         },
         "text": {
-          "value": "2. Fewer patient care records were captured in June 2016 and 2021 in NSW; interpret cautiously."
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "color": "#868686",
-        "align": "right",
-        "fontSize": 11,
-        "dx": -10,
-        "dy": 30
-      },
-      "encoding": {
-        "x": {
-          "value": 800
-        },
-        "y": {
-          "value": 50
-        },
-        "text": {
-          "value": "3. Reduced ambulance attendances in NSW Jan-Feb 2023 due to system issues and paramedic strikes; interpret cautiously."
+          "value": "2. Chronic alcohol-induced deaths include cirrhosis, heart disease, and pancreatitis."
         }
       }
     }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alcohol, Tobacco, and Other Drugs Impacts in Australia</title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <!-- Import vega-embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+        <h1>Alcohol, Tobacco, and Other Drugs Impacts in Australia</h1>
+
+        <div class="description">
+            <p>The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
+                This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b>alcohol</b> use, affecting public health outcomes worldwide.</p>
+        </div>
+        <div class="pure-g vis-group">
+            <div class="pure-u-1-1 vis-container" id="vis1"></div>
+            <div class="pure-u-1-1 vis-container" id="vis2"></div>
+            <div class="pure-u-1-1 vis-container" id="vis3"></div>
+        </div>
+
+        <p class="small-font">This dashboard is created using Vega-Lite visualizations. The data is sourced from the
+            Australian Institute of Health and Welfare：https://www.aihw.gov.au/reports/alcohol/alcohol-tobacco-other-drugs-australia/data.</p>
+
+    </div> <!-- end page -->
+
+    <script type="text/javascript">
+        var specVis1 = "js/Proportion_who_smoke_daily.vg.json";
+        var specVis2 = "js/Alcohol_consumption_per_capitaof_pure_alcohol.vg.json";
+        var specVis3 = "js/Number_of_cigarettes_smoked_per_day.vg.json";
+        var specVis4 = "js/Alcohol_deaths.vg.json";
+        var specVis5 = "js/Drug_related_ambulance.vg.json";
+        var specVis6 = "js/heatmap.vg.json";
+        var specVis7 = "js/dountchart.vg.json";
+
+        vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#vis7', specVis7, { "actions": false }).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+    </script>
+</body>
+
+</html>

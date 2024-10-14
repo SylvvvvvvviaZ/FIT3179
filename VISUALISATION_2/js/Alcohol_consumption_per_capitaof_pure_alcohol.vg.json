@@ -1,9 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
-    "height": 350,
+    "height": 400,
     "title": {
-        "text": "Alcohol Consumption (Liters per Capita of Pure Alcohol) Among People Aged 15 and Over",
+        "text": "Alcohol Consumption Among People Aged 15 and Over In OECD Countries",
         "fontSize": 15,
         "fontWeight": "bold",
         "anchor": "middle",
@@ -36,10 +36,21 @@
                     "feature": "ne_110m_admin_0_countries"
                 }
             },
+            "transform": [
+                {
+                    "calculate": "'Data is not available in ' + datum.properties.NAME",
+                    "as": "note"
+                }
+            ],
             "mark": {
                 "type": "geoshape",
                 "fill": "#DFC6C6",
                 "stroke": "white"
+            },
+            "encoding": {
+                "tooltip": {
+                    "field": "note"
+                }
             }
         },
         {

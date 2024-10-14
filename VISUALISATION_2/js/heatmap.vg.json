@@ -61,7 +61,7 @@
         "align": "right",
         "baseline": "top",
         "dx": -10,
-        "dy": 11,
+        "dy": 5,
         "fontSize": 10,
         "fontWeight": "normal",
         "color": "#effad2"

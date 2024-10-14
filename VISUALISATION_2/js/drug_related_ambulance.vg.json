@@ -85,6 +85,47 @@
                 },
                 {
                     "mark": "line"
+                },
+                {
+                    "mark": "rule",
+                    "encoding": {
+                        "x": {},
+                        "y": {
+                            "datum": 652,
+                            "type": "quantitative"
+                        },
+                        "color": {
+                            "value": "#AA4D4D"
+                        },
+                        "size": {
+                            "value": 2
+                        }
+                    }
+                },
+                {
+                    "mark": {
+                        "type": "text",
+                        "align": "right",
+                        "dx": -5,
+                        "dy": -5
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "Year",
+                            "timeUnit": "year",
+                            "aggregate": "max"
+                        },
+                        "y": {
+                            "datum": 660,
+                            "type": "quantitative"
+                        },
+                        "text": {
+                            "value": "Average Number of Ambulance Attendances ≈ 652"
+                        },
+                        "color": {
+                            "value": "#AA4D4D"
+                        }
+                    }
                 }
             ]
         },

@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
+  "width": 700,
   "height": 350,
   "title": {
-    "text": "Proportion of Daily Smokers By Sex Among People Aged 15 and Over",
+    "text": "Proportion of Daily Smokers By Sex Among People Aged 15 and Over In OECD Countries",
     "fontSize": 15,
     "fontWeight": "bold",
     "anchor": "middle",
@@ -36,10 +36,21 @@
           "feature": "ne_110m_admin_0_countries"
         }
       },
+      "transform": [
+        {
+          "calculate": "'Data is not available in ' + datum.properties.NAME",
+          "as": "note"
+        }
+      ],
       "mark": {
         "type": "geoshape",
         "fill": "#D1E0E3",
         "stroke": "white"
+      },
+      "encoding": {
+        "tooltip": {
+          "field": "note"
+        }
       }
     },
     {
@@ -84,7 +95,7 @@
               35
             ],
             "range": [
-              "#95D3DF",
+              "#C7D2DF",
               "#4E79A7"
             ]
           },
