@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
+    "width": 500,
     "height": 350,
     "title": {
       "text": "Most Common Psychosocial Risk Factors For Drug-induced Deaths In 2019–2022",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": 600,
   "height": 300,
   "title": {
     "text": "Drug-Induced Deaths By Drug Type in 1997–2022",
@@ -68,13 +68,13 @@
       },
       "encoding": {
         "x": {
-          "value": 800
+          "value": 600
         },
         "y": {
           "value": 0
         },
         "text": {
-          "value": "Note: A single death may involve multiple drugs, so the total number of deaths may exceed the number of fatalities."
+          "value": "Note: A single death may involve multiple drugs."
         }
       }
     }

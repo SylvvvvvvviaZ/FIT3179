@@ -3,17 +3,20 @@
 
 <head>
     <title>Alcohol, Tobacco, and Other Drugs Impacts in Australia</title>
-    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <!-- Import Vega & Vega-Lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <!-- Import vega-embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-    <!-- Import pure.css -->
+    <!-- Import Pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.9/build/pure-max.css">
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,77 +24,128 @@
     <div class="page">
         <h1>Alcohol, Tobacco, and Other Drugs Impacts in Australia</h1>
 
-        <!-- Text on top of Visualization 1, 2, 3 (3 visualizations in one row) -->
         <div class="description">
-            <p>The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
-                regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
-                This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b>alcohol</b> use, affecting public health outcomes worldwide.</p>
-        </div>
-        <div class="pure-g vis-group">
-            <div class="pure-u-1-1 vis-container" id="vis1"></div>
-            <div class="pure-u-1-1 vis-container" id="vis2"></div>
-            <div class="pure-u-1-1 vis-container" id="vis3"></div>
+            <p>This dashboard explores key trends and insights related to smoking, drug, and alcohol consumption through a series of interactive data visualizations powered by Vega-Lite. Users can engage with the data, uncover patterns, and better understand the factors influencing substance use. 
+            </p>
         </div>
 
-        <!-- Text on top of Visualization 4 (1 visualization in one row) -->
-        <div class="description">
-            <p>The scatter plot highlights <b>alcohol intoxication</b> as the most common reason for drug-related ambulance attendances, with significantly higher <b>incident numbers</b> and <b>crude rates</b> compared to other substances. 
-                <b>Opioids</b> and <b>amphetamines</b> also contribute to elevated incident rates, although they are less frequent. 
-                The data suggests that addressing <b>alcohol-related emergencies</b> should be prioritized in public health strategies, as it dominates drug-related ambulance calls from <b>2015–2023</b> across various jurisdictions.</p>
-        </div>
-        <div class="pure-g vis-group">
-            <div class="pure-u-1-1 vis-container" id="vis4"></div>
+        <!-- Visualization Group -->
+        <div class="vis-group">
+
+            <!-- Visualization and Text Block 1: Selection Buttons and Vis1, Vis2, Vis3 -->
+            <div class="pure-g vis-block">
+                <!-- Visualization Column (moved to top) -->
+                <div class="pure-u-1 pure-u-md-2-3 vis-column">
+                    <div id="vis1"></div>
+                    <div id="vis2" style="display:none;"></div>
+                    <div id="vis3" style="display:none;"></div>
+                </div>
+                <!-- Text and Selection Buttons Column -->
+                <div class="pure-u-1 pure-u-md-1-3 text-column">
+                    <h2>Smoking and Alcohol Consumption Overview</h2>
+                    <p>The data highlights regional impacts of <b>alcohol</b>, <b>tobacco</b>, and <b>other drugs</b> in Australia, showing significant <b>alcohol consumption</b> and <b>smoking rates</b> compared to global trends, with broader implications for public health and policy interventions.</p>
+                    <!-- Selection Buttons -->
+                    <form id="vis-selection-form">
+                        <label><input type="radio" name="vis123" value="vis1" checked> Daily Smoking Rates by Sex</label><br>
+                        <label><input type="radio" name="vis123" value="vis2"> Alcohol Consumption Trends</label><br>
+                        <label><input type="radio" name="vis123" value="vis3"> Cigarettes Smoked Per Day</label>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Visualization and Text Block 2 -->
+            <div class="vis-block alt-layout">
+                <!-- Visualization Column (moved to top) -->
+                <div class="pure-u-1 pure-u-md-1-3 vis-column">
+                    <div id="vis4"></div>
+                </div>
+                <!-- Text Column -->
+                <div class="pure-u-1 pure-u-md-2-3 text-column">
+                    <h2>Alcohol-Related Deaths</h2>
+                    <p>The data on <b>alcohol-induced deaths</b> shows a correlation between <b>alcohol consumption</b> and mortality rates. Age groups over <b>45 years</b> in <b>Australia</b> show significant increases in <b>alcohol-related deaths</b>, highlighting crucial public health concerns.</p>
+                </div>
+            </div>
+
+            <!-- Visualization and Text Block 3 -->
+            <div class="pure-g vis-block">
+                <!-- Visualization Column (moved to top) -->
+                <div class="pure-u-1 pure-u-md-2-3 vis-column">
+                    <div id="vis5"></div>
+                </div>
+                <!-- Text Column -->
+                <div class="pure-u-1 pure-u-md-1-3 text-column">
+                    <h2>Drug-Related Ambulance Calls</h2>
+                    <p>The data on <b>drug-related ambulance calls</b> shows an increase in emergency responses due to <b>opioids</b> and <b>amphetamines</b>. You can interactively select the <b>year</b> to observe trends and the impact on emergency services.</p>
+                </div>
+            </div>
+
+            <!-- Visualization and Text Block 4 -->
+            <div class="pure-g vis-block alt-layout">
+                <!-- Visualization Column (moved to top) -->
+                <div class="pure-u-1 pure-u-md-1-3 vis-column">
+                    <div id="vis6"></div>
+                </div>
+                <!-- Text Column -->
+                <div class="pure-u-1 pure-u-md-2-3 text-column">
+                    <h2>Heatmap of Substance Abuse</h2>
+                    <p>The data on <b>substance abuse</b> highlights <b>drug-induced deaths</b> by type across different years. You can interactively select the <b>year</b> to identify patterns and hotspots, showing significant impacts of <b>opioids</b> and <b>alcohol</b> over time.</p>
+                </div>
+            </div>
+
+            <!-- Visualization and Text Block 5 -->
+            <div class="pure-g vis-block">
+                <!-- Visualization Column (moved to top) -->
+                <div class="pure-u-1 pure-u-md-1-3 vis-column">
+                    <div id="vis7"></div>
+                </div>
+                <!-- Text Column -->
+                <div class="pure-u-1 pure-u-md-2-3 text-column">
+                    <h2>Donut Chart of Drug Usage</h2>
+                    <p>The data on <b>psychosocial risk factors</b> for <b>drug-induced deaths</b> provides insights into contributing factors. You can interactively select the <b>year</b> to explore how risks like <b>unemployment</b> and <b>family disruption</b> have evolved over time.</p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Text on top of Visualization 5, 6 (2 visualizations in one row) -->
-        <div class="description">
-            <p>The <b>psychosocial risk factors</b> and <b>associated causes</b> for drug-induced deaths reveal complex underlying issues. 
-                Personal history of <b>self-harm</b> and <b>relationship problems</b> are significant psychosocial contributors, 
-                while <b>mental and behavioral disorders</b> and <b>heart failure</b> stand out among associated causes. The combination of these factors suggests that addressing both <b>mental health</b> and <b>social stability</b> 
-                is essential in reducing drug-related fatalities. Tailored interventions targeting these areas could help mitigate risks from <b>2015–2023</b> data.</p>
-
-        </div>
-        <div class="pure-g vis-group">
-            <div class="pure-u-1-1 vis-container" id="vis5"></div>
-            <div class="pure-u-1-1 vis-container" id="vis6"></div>
-        </div>
-
-        <p class="small-font">This dashboard is created using Vega-Lite visualizations. The data is sourced from the
-            Australian Institute of Health and Welfare：https://www.aihw.gov.au/reports/alcohol/alcohol-tobacco-other-drugs-australia/data.</p>
-
+        <p class="small-font">FIT3179 Data Visualisation - Assignment 2<br>
+            Name: Xiaowen Zhou<br>
+            Date: 10 Oct, 2024<br>
+            The data is sourced from the
+            <a href="https://www.aihw.gov.au/reports/alcohol/alcohol-tobacco-other-drugs-australia/data" target="_blank">Australian Institute of Health and Welfare (AIHW)</a>.<br>
+            Content is correct as at 29 May 2024. Reports released after this date will be included in the next scheduled release.
+            </p>
+            
     </div> <!-- end page -->
 
     <script type="text/javascript">
+        // Visualization specifications
         var specVis1 = "js/Proportion_who_smoke_daily.vg.json";
         var specVis2 = "js/Alcohol_consumption_per_capitaof_pure_alcohol.vg.json";
         var specVis3 = "js/Number_of_cigarettes_smoked_per_day.vg.json";
-        var specVis4 = "js/Drug_related_ambulance.vg.json";
-        var specVis5 = "js/pie2.vg.json";
-        var specVis6 = "js/pie1.vg.json";
+        var specVis4 = "js/Alcohol_deaths.vg.json";
+        var specVis5 = "js/Drug_related_ambulance.vg.json";
+        var specVis6 = "js/heatmap.vg.json";
+        var specVis7 = "js/dountchart.vg.json";
 
-        vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
+        // Embed visualizations
+        vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis3', specVis3, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis4', specVis4, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis5', specVis5, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis6', specVis6, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis7', specVis7, { "actions": false }).catch(console.error);
 
-        vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis3', specVis3, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis4', specVis4, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
-
-        vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
-            // Access the Vega view instance as result.view
-        }).catch(console.error);
+        // Event listener for Vis1, Vis2, Vis3 selection
+        document.getElementById('vis-selection-form')?.addEventListener('change', function (e) {
+            var selectedVis = document.querySelector('input[name="vis123"]:checked').value;
+            // Hide all visualizations
+            for (var i = 1; i <= 3; i++) {
+                document.getElementById('vis' + i).style.display = 'none';
+            }
+            // Show selected visualization
+            document.getElementById(selectedVis).style.display = 'block';
+        });
     </script>
 </body>
 

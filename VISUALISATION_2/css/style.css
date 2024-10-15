@@ -1,104 +1,131 @@
-/* css/style.css */
+/* style.css */
 
-/* Global Styles */
-
-body {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
+/* Main page container */
 .page {
-    margin: 20px;
+    max-width: 1300px;
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    background-color: #FFF9E0; /* Light yellow background */
+    overflow-y: auto; /* Vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box;
 }
 
+/* Body styling */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #fbfbfb; /* Light background */
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+/* Title */
 h1 {
-    font-weight: 700;
-    font-size: 2em;
     text-align: center;
-    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 40px; /* Adjusted font size */
+    margin-bottom: 20px;
 }
 
+/* Sub-headings */
 h2 {
-    font-weight: 700;
-    font-size: 1.5em;
-    margin: 20px 0;
-}
-
-/* Description Paragraph */
-.description p {
-    font-size: 1em;
-    line-height: 1.6em;
-    margin-bottom: 30px;
-}
-
-/* Small Font Paragraph */
-.small-font {
-    font-size: 0.8em;
-    color: #555;
-    margin-top: 40px;
+    font-size: 27px; /* Adjusted font size */
+    margin-bottom: 10px;
+    color: #605f5f;
     text-align: center;
 }
 
-/* Visualization Group */
+/* Text Description */
+.description p {
+    font-size: 17px; /* Adjusted font size */
+    line-height: 1.6;
+    text-align: start;
+    margin-bottom: 30px;
+    color: #4E79A7; /* Text color */
+}
+
+/* General Styling for the Group */
 .vis-group {
-    margin-bottom: 50px;
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: space-between; /* Distributes space evenly between columns */
 }
 
-/* Visualization Containers */
-.vis-container {
-    width: 100%;
-    height: auto;
-}
-
-/* Adjustments for Pure CSS Grid */
-.pure-g [class *= "pure-u"] {
-    padding: 10px;
-}
-
-/* Vis1, Vis2, Vis3 Selection Form */
-#vis-selection-form {
-    margin-top: 20px;
-}
-
-#vis-selection-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1em;
-}
-
-/* Aligning Text and Visualizations */
-.pure-u-1-4, .pure-u-1-2 {
+/* Block Styling with Margin for Spacing Between Elements */
+/* Default layout (text on the left, vis on the right) */
+.vis-block {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row-reverse; /* Text first, then vis */
+    margin-bottom: 20px;
 }
 
-.pure-u-1-4 {
-    flex-direction: column;
+/* Alternative layout (vis on the left, text on the right) */
+.vis-block.alt-layout {
+    flex-direction: row; /* Reverse back to vis first, then text */
 }
 
-/* Ensuring Visualizations Take Full Height */
-#vis123-container, #vis4, #vis5, #vis6, #vis7 {
-    min-height: 400px; /* Adjust as needed for your visualizations */
+/* Optional Custom Styling for Text Column */
+.text-column {
+    flex: 0.3; /* Makes this column flexible */
+    padding: 10px; /* Optional: Add padding to the text column */
+    min-width: 200px; /* Ensure a minimum width for the column */
 }
 
-/* Hide Visualizations by Default */
-#vis2, #vis3 {
-    display: none;
+/* Optional Custom Styling for Visualization Column */
+.vis-column {
+    flex: 1; /* Makes this column flexible */
+    padding: 10px; /* Optional: Add padding to the visualization column */
+    min-width: 300px; /* Ensure a minimum width for the column */
 }
 
-/* Responsive Design */
+/* Small font text at the bottom */
+.small-font {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 20px;
+    text-align: start;
+    font-size: 14px;
+}
+
+/* Highlighted <b> text */
+b {
+    color: #4E79A7; /* Highlight <b> elements in blue */
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+/* Pure.css handles responsiveness, but you can adjust visualization heights if needed */
+@media (max-width: 1200px) {
+    .vis-column div {
+        height: 400px; /* Adjust height for smaller screens */
+    }
+}
+
 @media (max-width: 768px) {
-    /* Stack columns on small screens */
-    .pure-g [class *= "pure-u-1-2"],
-    .pure-g [class *= "pure-u-3-4"],
-    .pure-g [class *= "pure-u-1-4"] {
-        width: 100%;
+    .vis-column div {
+        height: 250px; /* Further adjust height for very small screens */
     }
 
-    /* Center text */
+    h1 {
+        font-size: 2em;
+    }
+
     h2 {
-        text-align: center;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .vis-column div {
+        height: 200px; /* Further adjust height for very small screens */
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
     }
 }
