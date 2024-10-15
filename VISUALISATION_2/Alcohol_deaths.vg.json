@@ -1,0 +1,182 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": {
+    "text": "Alcohol-Induced Deaths by Age Group In 1997–2022",
+    "fontSize": 14,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#000000"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Alcohol_deaths.csv"
+  },
+  "params": [
+    {
+      "name": "Type",
+      "value": "All alcohol-induced deaths",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All alcohol-induced deaths",
+          "Chronic alcohol-induced deaths",
+          "Acute alcohol-induced deaths"
+        ],
+        "labels": [
+          "All alcohol-induced deaths",
+          "Chronic alcohol-induced deaths",
+          "Acute alcohol-induced deaths"
+        ],
+        "name": "Type Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Type == null || datum.Type == Type"
+    }
+  ],
+  "layer": [
+    {
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "temporal",
+          "timeUnit": "year",
+          "title": "Year",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 12
+          }
+        },
+        "y": {
+          "field": "Death",
+          "type": "quantitative",
+          "title": "Death",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 12
+          }
+        },
+        "color": {
+          "field": "Age Group",
+          "type": "nominal",
+          "title": "Age Group",
+          "scale": {
+            "range": [
+              "#7D957F",
+              "#80A688",
+              "#9CB4CE",
+              "#C7D2DF",
+              "#DFC6C6"
+            ]
+          }
+        },
+        "size": {
+          "field": "Death",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              50,
+              250
+            ]
+          }
+        },
+        "opacity": {
+          "value": 1
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "timeUnit": "year",
+            "title": "Year"
+          },
+          {
+            "field": "Age Group",
+            "type": "nominal",
+            "title": "Age Group"
+          },
+          {
+            "field": "Type",
+            "type": "nominal",
+            "title": "Type"
+          },
+          {
+            "field": "Death",
+            "type": "quantitative",
+            "title": "Death"
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "white",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#AA4D4D",
+        "align": "right",
+        "fontSize": 11,
+        "dx": -10,
+        "dy": -30
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "Notes:"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#AA4D4D",
+        "align": "right",
+        "fontSize": 10,
+        "dx": -10,
+        "dy": -10
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "1. Alcohol-induced deaths are directly linked to alcohol use from toxicology/pathology reports."
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "#AA4D4D",
+        "align": "right",
+        "fontSize": 10,
+        "dx": -10,
+        "dy": 10
+      },
+      "encoding": {
+        "x": {
+          "value": 800
+        },
+        "y": {
+          "value": 50
+        },
+        "text": {
+          "value": "2. Chronic alcohol-induced deaths include cirrhosis, heart disease, and pancreatitis."
+        }
+      }
+    }
+  ]
+}

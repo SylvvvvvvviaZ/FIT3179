@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 350,
+    "title": {
+      "text": "Most Common Psychosocial Risk Factors For Drug-induced Deaths In 2019–2022",
+      "fontSize": 14,
+      "fontWeight": "bold",
+      "anchor": "middle",
+      "color": "#000000"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Psychosocial_risk_factors_for_drug-induced_deaths.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum['Year'] == yearSelection_Year.Year"
+      }
+    ],
+    "mark": {
+      "type": "arc",
+      "innerRadius": 85,
+      "tooltip": true
+    },
+    "encoding": {
+      "theta": {
+        "field": "Percentage (%)",
+        "type": "quantitative"
+      },
+      "color": {
+        "field": "Psychosocial risk factors",
+        "type": "nominal",
+        "title": "Psychosocial Risk Factor",
+        "legend": {
+          "titleFontSize": 14,
+          "labelFontSize": 12,
+          "labelLimit": 800
+        },
+        "scale": {
+          "range": ["#7D957F", "#80A688", "#C1D4C5", 
+          "#4E79A7","#9CB4CE", "#C7D2DF", "#dadae4",
+          "#DFC6C6", "#CF9A9A", "#AA4D4D"
+          ]
+        }
+      },
+      "tooltip": [
+        {"field": "Psychosocial risk factors", "type": "nominal", "title": "Psychosocial Risk Factor"},
+        {"field": "Number", "type": "quantitative", "title": "Number"},
+        {"field": "Percentage (%)", "type": "quantitative", "title": "Percentage (%)"}
+      ]
+    },
+    "view": {
+      "stroke": null
+    },
+    "selection": {
+      "yearSelection_Year": {
+        "type": "single",
+        "fields": ["Year"],
+        "bind": {
+          "input": "range",
+          "min": 2019,
+          "max": 2022,
+          "step": 1,
+          "name": "Year Selection: "
+        },
+        "init": {
+          "Year": 2020
+        }
+      }
+    }
+  }
+  

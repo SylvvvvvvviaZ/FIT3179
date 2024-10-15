@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 300,
+  "title": {
+    "text": "Drug-Induced Deaths By Drug Type in 1997–2022",
+    "fontSize": 15,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#000000"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Death_by_Drug_Type_per_Year.csv"
+  },
+  "layer": [
+    {
+      "mark": "rect",
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 12
+          }
+        },
+        "y": {
+          "field": "Drug Type",
+          "type": "nominal",
+          "title": "Drug Type",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 12,
+            "labelLimit": 800
+          }
+        },
+        "color": {
+          "field": "Death Number",
+          "type": "quantitative",
+          "title": "Deaths",
+          "aggregate": "sum",
+          "scale": {
+            "range": [
+              "#C1D4C5",
+              "#80A688",
+              "#7D957F"
+            ]
+          }
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "Drug Type", "type": "nominal", "title": "Drug Type"},
+          {"field": "Death Number", "type": "quantitative", "title": "Death Number"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": -10,
+        "dy": 5,
+        "fontSize": 10,
+        "fontWeight": "normal",
+        "color": "#effad2"
+      },
+      "encoding": {
+        "x": {
+          "value": 600
+        },
+        "y": {
+          "value": 0
+        },
+        "text": {
+          "value": "Note: A single death may involve multiple drugs."
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "strokeWidth": 0,
+      "step": 15
+    },
+    "axis": {
+      "domain": false
+    }
+  }
+}
