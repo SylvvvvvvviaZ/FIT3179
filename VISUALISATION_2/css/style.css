@@ -2,7 +2,7 @@
 
 /* Main page container */
 .page {
-    max-width: 1300px;
+    max-width: 1350px;
     margin: 0 auto; /* Center the content */
     padding: 20px;
     background-color: #FFF9E0; /* Light yellow background */
@@ -38,9 +38,9 @@ h2 {
 
 /* Text Description */
 .description p {
-    font-size: 17px; /* Adjusted font size */
+    font-size: 16px; /* Adjusted font size */
     line-height: 1.6;
-    text-align: start;
+    text-align: center;
     margin-bottom: 30px;
     color: #4E79A7; /* Text color */
 }
@@ -96,7 +96,7 @@ b {
 
 /* Responsive Adjustments */
 /* Pure.css handles responsiveness, but you can adjust visualization heights if needed */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .vis-column div {
         height: 400px; /* Adjust height for smaller screens */
     }

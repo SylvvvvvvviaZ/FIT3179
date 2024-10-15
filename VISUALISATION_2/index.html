@@ -43,7 +43,7 @@
                 <!-- Text and Selection Buttons Column -->
                 <div class="pure-u-1 pure-u-md-1-3 text-column">
                     <h2>Smoking and Alcohol Consumption Overview</h2>
-                    <p>The data highlights regional impacts of <b>alcohol</b>, <b>tobacco</b>, and <b>other drugs</b> in Australia, showing significant <b>alcohol consumption</b> and <b>smoking rates</b> compared to global trends, with broader implications for public health and policy interventions.</p>
+                    <p>The data highlights regional impacts of <b>alcohol</b> and <b>tobacco</b> in Australia, showing significant <b>alcohol consumption</b> and <b>smoking rates</b> compared to global trends, with broader implications for public health and policy interventions.</p>
                     <!-- Selection Buttons -->
                     <form id="vis-selection-form">
                         <label><input type="radio" name="vis123" value="vis1" checked> Daily Smoking Rates by Sex</label><br>
@@ -75,7 +75,8 @@
                 <!-- Text Column -->
                 <div class="pure-u-1 pure-u-md-1-3 text-column">
                     <h2>Drug-Related Ambulance Calls</h2>
-                    <p>The data on <b>drug-related ambulance calls</b> shows an increase in emergency responses due to <b>opioids</b> and <b>amphetamines</b>. You can interactively select the <b>year</b> to observe trends and the impact on emergency services.</p>
+                    <p>The data on <b>drug-related ambulance calls</b> shows an increase in emergency responses due to <b>opioids</b> and <b>amphetamines</b>. </p>
+                    <p>You can interactively select the <b>year</b> to observe trends and the impact on emergency services.</p>
                 </div>
             </div>
 
@@ -119,13 +120,13 @@
 
     <script type="text/javascript">
         // Visualization specifications
-        var specVis1 = "js/Proportion_who_smoke_daily.vg.json";
-        var specVis2 = "js/Alcohol_consumption_per_capitaof_pure_alcohol.vg.json";
-        var specVis3 = "js/Number_of_cigarettes_smoked_per_day.vg.json";
-        var specVis4 = "js/Alcohol_deaths.vg.json";
+        var specVis1 = "Proportion_who_smoke_daily.vg.json";
+        var specVis2 = "Alcohol_consumption_per_capitaof_pure_alcohol.vg.json";
+        var specVis3 = "Number_of_cigarettes_smoked_per_day.vg.json";
+        var specVis4 = "Alcohol_deaths.vg.json";
         var specVis5 = "Drug_related_ambulance.vg.json";
-        var specVis6 = "js/heatmap.vg.json";
-        var specVis7 = "js/dountchart.vg.json";
+        var specVis6 = "heatmap.vg.json";
+        var specVis7 = "dountchart.vg.json";
 
         // Embed visualizations
         vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
