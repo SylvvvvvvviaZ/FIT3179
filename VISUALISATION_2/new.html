@@ -5,16 +5,16 @@
     <title>Alcohol, Tobacco, and Other Drugs Impacts in Australia</title>
     <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <!-- Import vega-embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <!-- Import pure.css -->
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,21 +29,20 @@
         <!-- Visualization Group -->
         <div class="pure-g vis-group">
 
-            <!-- Vis1, Vis2, Vis3 with selection button on the left -->
+            <!-- Vis1, Vis2, Vis3 text on the left -->
             <div class="pure-u-1-1">
                 <h2>11111111The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
-                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
-                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of</h2>
                 <div class="pure-g">
-                    <!-- Selection Buttons on the left -->
+                    <!-- Selection Buttons on the right above-->
                     <div class="pure-u-1-4">
                         <form id="vis-selection-form">
-                            <label><input type="radio" name="vis123" value="vis1" checked> Vis1</label><br>
-                            <label><input type="radio" name="vis123" value="vis2"> Vis2</label><br>
-                            <label><input type="radio" name="vis123" value="vis3"> Vis3</label>
+                            <label><input type="radio" name="vis123" value="vis1" checked> Daily Smoking Rates by Sex</label><br>
+                            <label><input type="radio" name="vis123" value="vis2"> Alcohol Consumption Trends</label><br>
+                            <label><input type="radio" name="vis123" value="vis3"> Cigarettes Smoked Per Day</label>
                         </form>
                     </div>
-                    <!-- Visualization container on the right -->
+                    <!-- Vis1, Vis2, Vis3 Visualization container on the right -->
                     <div class="pure-u-3-4" id="vis123-container">
                         <div id="vis1"></div>
                         <div id="vis2" style="display:none;"></div>
@@ -52,35 +51,31 @@
                 </div>
             </div>
 
-            <!-- Vis4 on the right with text "222" on the left -->
+            <!-- Vis4 on the middle ,with text "222...." on the middle but above Vis4-->
             <div class="pure-u-1-1">
-                <h2>The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
-                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
-                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <h2>222222222The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of</h2>
                 <div id="vis4"></div>
             </div>
 
-            <!-- Vis5 in the middle with text "333" above -->
+            <!-- Vis5 on the middle ,with text "333...." on the middle but above Vis5 -->
             <div class="pure-u-1-1">
-                <h2>555The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
-                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
-                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <h2>33333333The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</b> report the high</h2>
                 <div id="vis5"></div>
             </div>
 
-            <!-- Vis6 on the left with text "444" on the right -->
+            <!-- Vis6 on the right with text "444...." on the left -->
             <div class="pure-u-1-1">
-                <h2>555The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
-                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
-                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                <h2>4444The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
+                    regions such as the <b>United States</b> and <b>Europe</h2>
                 <div id="vis6"></div>
             </div>
 
-            <!-- Vis7 in the middle with text "555" above -->
+            <!-- Vis7 on the left with text "555...." on the right -->
             <div class="pure-u-1-1">
                 <h2>555The global data on <b>smoking</b> and <b>alcohol consumption</b> reveals notable regional trends. Countries in <b>Europe</b> and <b>North America</b> show higher proportions of <b>daily smokers</b>, while <b>Australia</b> exhibits significant alcohol consumption levels. Additionally, 
-                    regions such as the <b>United States</b> and <b>Europe</b> report the highest average number of <b>cigarettes smoked</b> per day. 
-                    This analysis highlights how different regions vary in health risks, particularly <b>tobacco</b> and <b></h2>
+                    regions such as the <b>United States</b> and <b>Europe</b> report the highest</b> and <b></h2>
                 <div id="vis7"></div>
             </div>
 
