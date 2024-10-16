@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 350,
+  "title": {
+    "text": "Proportion of Daily Smokers By Sex Among People Aged 15 and Over",
+    "fontSize": 15,
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#000000"
+  },
+  "projection": {
+    "type": "equalEarth"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/js/ne_110m_graticules_30.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_30"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#d4d4d4",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/js/ne_110m_admin_0_countries.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#D1E0E3",
+        "stroke": "white"
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/js/ne_110m_admin_0_countries.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.NAME",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/SylvvvvvvviaZ/FIT3179/main/VISUALISATION_2/data/Proportion_who_smoke_daily.csv"
+            },
+            "key": "Country",
+            "fields": [
+              "Persons (%)",
+              "Males (%)",
+              "Females (%)",
+              "Latest year of data"
+            ]
+          }
+        },
+        {
+          "filter": "datum['Persons (%)'] != null"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white"
+      },
+      "encoding": {
+        "color": {
+          "field": "Persons (%)",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              35
+            ],
+            "range": [
+              "#95D3DF",
+              "#4E79A7"
+            ]
+          },
+          "legend": {
+            "title": "Persons (%)"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.NAME",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "Persons (%)",
+            "type": "quantitative"
+          },
+          {
+            "field": "Males (%)",
+            "type": "quantitative",
+            "title": "Males (%)"
+          },
+          {
+            "field": "Females (%)",
+            "type": "quantitative",
+            "title": "Females (%)"
+          },
+          {
+            "field": "Latest year of data",
+            "type": "nominal",
+            "title": "Latest Year of Data"
+          }
+        ]
+      }
+    }
+  ]
+}
